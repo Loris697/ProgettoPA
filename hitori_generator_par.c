@@ -5,6 +5,7 @@
 #include "math.h"
 #include <sys/time.h>
 #include <stdint.h>
+#include <ctype.h>
 
 #define PART_PER_PROCESS 4024
 #define TERMINATE 31000
@@ -72,50 +73,55 @@ int start_termination(int next,int prev);
 int increasing_no_success_proc(int idproc);
 int print_once(int prev,int next);
 void shuffle(int *array, size_t n);
+int isNumber(char number[]);
 
 int main(int argc, char **argv)
 	{
 	char* input_file;
-        //count how many block I've to find state
-        int unknown;
+	//count how many block I've to find state
+	int unknown;
 
-        if(argc<3 || argc>3){
-            printf("\nThe program needs two arguments: \n1)The file containing the puzzle\n2) The dimension o f the puzzle");
-            return 1;
-        }
-        
-        //Initialization of the MPI data structures
-        MPI_Init(&argc, &argv);
-        MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-        MPI_Comm_size(MPI_COMM_WORLD, &n_process); 
-        
-        //Making the logical ring to avoid bad termination due to the call of MPI_finalize
-        //with message in the receive buffer
-        int next = (rank + 1)%n_process;
-        int prev = (rank + n_process - 1)%n_process;
-        int color = 0; // 0 = white 1 = black
+	if(argc<3 || argc>3){
+		printf("\nThe program needs two arguments: \n1)The file containing the puzzle\n2) The dimension o f the puzzle");
+		return 1;
+	}
+
+  //Initialization of the MPI data structures
+  MPI_Init(&argc, &argv);
+  MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+  MPI_Comm_size(MPI_COMM_WORLD, &n_process);
+
+  //Making the logical ring to avoid bad termination due to the call of MPI_finalize
+  //with message in the receive buffer
+  int next = (rank + 1)%n_process;
+  int prev = (rank + n_process - 1)%n_process;
+  int color = 0; // 0 = white 1 = black
 	input_file = argv[1];
-        size = atoi(argv[2]);
-        unknown = size*size;
-        block** backup_matrix = malloc_matrix();
-        
-        //Making the datatypes
-        if( MPI_Type_contiguous(2, MPI_INT, &message_datatype) == -1){
+	if( isNumber(argv[2]) ) size = atoi(argv[2]);
+	else{
+		printf("Il secondo argomento deve essere un intero.\n");
+		return 1;
+	}
+  unknown = size*size;
+  block** backup_matrix = malloc_matrix();
+
+  //Making the datatypes
+  if( MPI_Type_contiguous(2, MPI_INT, &message_datatype) == -1){
 		printf("Creation of the datatype failed.\n");
 		return -1;
-        }
-        MPI_Type_commit(&message_datatype);
-		
+  }
+  MPI_Type_commit(&message_datatype);
+
 	MPI_Aint displ[2];
 	int bl[2] = {1, 1};
 	MPI_Datatype dt[2] = {MPI_INT, MPI_CHAR};
-				
+
 	MPI_Get_address(&(backup_matrix[0][0].value), &displ[0]);
 	MPI_Get_address(&(backup_matrix[0][0].state), &displ[1]);
-				
+
 	displ[1] -= displ[0];
 	displ[0] = 0;
-				
+
 	if (MPI_Type_create_struct(2, bl, displ, dt, &block_datatype) == -1){
 		printf("Creation of the datatype failed.\n");
 		return -1;
@@ -124,25 +130,25 @@ int main(int argc, char **argv)
 
         if(!strcmp(input_file ,"stdin"))
 		read_matrix_from_stdin(&global_matrix);
-        else
-		read_matrix_from_file(&global_matrix,input_file);
-    
-        /*if (!rank){ 
+        else{
+		if( read_matrix_from_file(&global_matrix,input_file) == -1) return -1;
+	}
+
+        /*if (!rank){
 		printf("Solving\n");
 		print_matrix(global_matrix);
 	}*/
 	//Per misurare il tempo
 	MPI_Barrier(MPI_COMM_WORLD);
 	double time = - MPI_Wtime();
-        
+
         //Dividing the work at least 8 part per process to better balance the workload
-        //Discover how many part there are (questa volta devo considerare il logaritmo di "size" perchè ogni nodo mi genererà 
+        //Discover how many part there are (questa volta devo considerare il logaritmo di "size" perchè ogni nodo mi genererà
 	//"size" nodi figli)
-        n_cell_assigned = (int) ceil(logbase((double)size,(double) n_process * PART_PER_PROCESS));
-        int parts = (int) pow(size, n_cell_assigned); 
-        int ppp_effective = parts / n_process;
-        if (rank < parts % n_process)
-        	ppp_effective++;
+	n_cell_assigned = (int) ceil(logbase((double)size,(double) n_process * PART_PER_PROCESS));
+	int parts = (int) pow(size, n_cell_assigned);
+	int ppp_effective = parts / n_process;
+	if (rank < parts % n_process) ppp_effective++;
 	int i;
 	int return_code = 1;
 	int k = 0;
@@ -152,21 +158,21 @@ int main(int argc, char **argv)
 		mypart[k] = i;
 		k++;
 	}
-	
+
 	if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
-	
+
 	shuffle(mypart, ppp_effective);
-	
+
 	/*if(rank == 0){
 		for (k = 0; k < ppp_effective; k++) printf("%d ", mypart[k]);
 		printf("\n");
 	}*/
-	for (k = 0; k < ppp_effective; k++){  
+	for (k = 0; k < ppp_effective; k++){
 		int j = 0;
 		printf("%d) k = %d, mypart[k] = %d\n", rank, k, mypart[k]);
 		copy_matrix(&global_matrix, &backup_matrix);
-		//Adesso rimane da codificare le possibile soluzioni, il numero 'i' verra codificato come 
-		//valore casella 0 + valore casella 1 * size + ecc.. 
+		//Adesso rimane da codificare le possibile soluzioni, il numero 'i' verra codificato come
+		//valore casella 0 + valore casella 1 * size + ecc..
 		//Una rappresentazione in base size
 		int temp = mypart[k];
 		for(j = 0; j < n_cell_assigned; j++){
@@ -176,11 +182,11 @@ int main(int argc, char **argv)
 			temp = temp/ size;
 		}
 		//print_matrix(backup_matrix);
-				
+
 		//Se il ciclo non si è concluso
 		if(j != n_cell_assigned)
 			continue;
-         
+
 		return_code = solve_hitori(backup_matrix,0,unknown);
 		if(!return_code){
 				//printf("Solution found.\n");
@@ -188,9 +194,9 @@ int main(int argc, char **argv)
 				fprintf(stderr,"Examinated %d node by process %d.\n", node_count, rank);
 				break;
 		}else if(return_code == -2) break;
-            
+
         }
-		
+
 	if(rank){
 		int terminate = TERMINATE_NO_SUCC;
 		if ( return_code != -2 ){
@@ -211,16 +217,16 @@ int main(int argc, char **argv)
 			}
 		}
 	}
-		
+
 	//printf("%d) Terminate.\n", rank);
 	fflush(stdout);
 	MPI_Barrier(MPI_COMM_WORLD);
 	time += MPI_Wtime();
-	
+
 	//per stampare una sola matrice
 	if(n_process != 1) print_once(prev, next);
 	else print_matrix_result(global_matrix);
-		
+
         if (rank == 0) fprintf(stderr, "dim = %d)Execution time: %f\n",size, time);
         free_matrix(backup_matrix);
         MPI_Finalize();
@@ -231,13 +237,13 @@ int solve_hitori(block** matrix,int i,int unknown){
 	//My block's row and colum
 	int r = i / size;
 	int c = i % size;
-	
+
 	int next = (rank + 1)%n_process;
 	int prev = (rank + n_process - 1)%n_process;
 	int color = 0; // 0 = white 1 = black
-	
+
 	//printf("unknown = %d, i = %d\n", unknown,i);
-	
+
 	//Prima di iniziare i calcoli il processo zero controlla se ci sono messaggi di terminazione
 	//-2 significa terminazione immediata
 	if(rank == 0){
@@ -252,16 +258,16 @@ int solve_hitori(block** matrix,int i,int unknown){
 		global_matrix = matrix;
 		return 0;
 	}
-    
+
 	for(int set_value = 1; set_value <= size; set_value++){
 		//Verifico che la matrice non mi sia stata già assegnata
 		if ( i > n_cell_assigned)
 			matrix[r][c].value = set_value;
-			
+
 		//tring to set current block to white
 		node_count++;
 		matrix[r][c].state = 'w';
-		
+
 		//printf("cella = %d, valore = %d\n", i, set_value);
 
 		//If the function apply rule return -1 means that it failed
@@ -270,22 +276,21 @@ int solve_hitori(block** matrix,int i,int unknown){
 			if( return_code == 0) return 0;
 			else if(return_code == -2) return -2;
 		}
-        
+
 		//failed white trying black
 		node_count++;
 		matrix[r][c].state = 'b';
-		
+
 		if(apply_rule(&matrix, unknown-1) != - 1){
 			int return_code = solve_hitori(matrix, i + 1, unknown-1);
 			if( return_code == 0) return 0;
 			else if(return_code == -2) return -2;
         }
-		
+
 	//Interrompo il ciclo non posso modificare il valore
-	if ( i < n_cell_assigned)
-		break;
+	if ( i < n_cell_assigned) break;
     }
-    
+
     return -1;
 }
 
@@ -371,9 +376,11 @@ int find_connection_of_white(int row,int col,block** matrix){
 		int r = j / size;
 		int c = j % size;
 		if(flag_vector[j] == 0 && matrix[r][c].state == 'w'){
+			free(flag_vector);
 			return -1;
 		}
 	}
+	free(flag_vector);
 	return 0;
 }
 
@@ -423,7 +430,7 @@ block** malloc_matrix(){
     //Alloco le matrici
     block** matrix = calloc (size, sizeof(block*));
     matrix[0] = calloc (size * size, sizeof(block));
-        
+
     for (int i = 1; i < size; i++) {
         matrix[i] = matrix[i-1] + size;
     }
@@ -451,8 +458,10 @@ int read_matrix_from_file(block*** m, char* file_name){
 	if(!rank){
 		FILE *file;
 		file=fopen(file_name, "r");
-		if(file == NULL)
+		if(file == NULL){
 			printf("\nError while opening the file. \n");
+			return -1;
+		}
 
 		for(i = 0; i < size; i++){
 			for(j = 0; j < size; j++) {
@@ -462,10 +471,10 @@ int read_matrix_from_file(block*** m, char* file_name){
 			}
 
 		  }
-	
+
 	}
-	
-	//Se non sono solo condivido la matrice trasmetto(ricevo) i dati 
+
+	//Se non sono solo condivido la matrice trasmetto(ricevo) i dati
 	if(n_process != 1) MPI_Bcast(matrix[0],size*size, block_datatype,0,MPI_COMM_WORLD);
 	*m = matrix;
 	return 0;
@@ -488,8 +497,8 @@ int read_matrix_from_stdin(block*** m){
 
 		  }
 	}
-	
-	//Se non sono solo condivido la matrice trasmetto(ricevo) i dati 
+
+	//Se non sono solo condivido la matrice trasmetto(ricevo) i dati
 	if(n_process != 1) MPI_Bcast(matrix[0],size*size, block_datatype,0,MPI_COMM_WORLD);
 	*m = matrix;
     return 0;
@@ -532,10 +541,10 @@ void shuffle(int *array, size_t n)
 
     srand(t.tv_usec);
 
-    if (n > 1) 
+    if (n > 1)
     {
         size_t i;
-        for (i = 0; i < n - 1; i++) 
+        for (i = 0; i < n - 1; i++)
         {
           size_t j = i + rand() / (RAND_MAX / (n - i) + 1);
           int t = array[j];
@@ -543,6 +552,22 @@ void shuffle(int *array, size_t n)
           array[i] = t;
         }
     }
+}
+
+int isNumber(char number[])
+{
+    int i = 0;
+
+    //checking for negative numbers
+    if (number[0] == '-')
+        i = 1;
+    for (; number[i] != 0; i++)
+    {
+        //if (number[i] > '9' || number[i] < '0')
+        if (!isdigit(number[i]))
+            return 0;
+    }
+    return 1;
 }
 
 /*******************************************************************************
@@ -555,14 +580,14 @@ int check_for_termination(int next,int prev){
     MPI_Status st;
     MPI_Status recv_status;
     int return_code = 0;
-    
+
 	//Vedo se ci sono messaggi sul tag 0
     if( MPI_Iprobe(MPI_ANY_SOURCE, 0, MPI_COMM_WORLD,&not_recv, &st) == -1){
         printf("MPI_Probe failed.\n");
         return -1;
     }
 
-    
+
     if(not_recv){
         //printf("RECEIVED SOLUTION FOUND\n");
         //Reading the message
@@ -574,14 +599,14 @@ int check_for_termination(int next,int prev){
         start_termination(next, prev);
         return 1;
     }
-    
+
     //Sul tag 1 si mandano i messaggio della terminazione senza successo, leggo tutti i messaggi
     while(1){
         if( MPI_Iprobe(MPI_ANY_SOURCE, 1, MPI_COMM_WORLD,&not_recv, &st) == -1){
             printf("MPI_Probe failed.\n");
             return -1;
         }
-        
+
         if (not_recv) {
             //cprintf("Process %d received not success message.\n", rank);
             //Reading the message
@@ -590,24 +615,24 @@ int check_for_termination(int next,int prev){
                 printf("MPI_Recv failed.\n");
                 return -1;
             }
-            
+
             return_code = increasing_no_success_proc(status.color);
         }else break;
     }
-    
+
     return return_code;
 }
 
 int check_for_termination_waiting(int next,int prev){
     //Flag to check incoming messages
     MPI_Status recv_status;
-    
+
 	while(1){
 		if ( MPI_Recv(&status, 1, message_datatype, MPI_ANY_SOURCE, MPI_ANY_TAG, MPI_COMM_WORLD, &recv_status) == -1){
 				printf("MPI_Recv failed.\n");
 				return -1;
 		}
-			
+
 		if( recv_status.MPI_TAG == 0 ){
 			start_termination(next, prev);
 			termination_started = 1;
@@ -618,25 +643,25 @@ int check_for_termination_waiting(int next,int prev){
 				return TERMINATE;
 		}
 	}
-    
+
     return 0;
 }
 
 int start_termination(int next,int prev){
     int color = 0;
     int message_count = 0;
-	
+
 	//Se il programma è eseguito in sequenziale
 	if(n_process == 1) return 1;
-	
+
     while(1){
         send_message(next, &color);
-        
+
         //Chi manda il messaggio non deve cambiare colore
         color = 0;
 
         read_message(prev, &color);
-        
+
         if(color == 0 && status.color == 0 && message_count + status.count == 0){
             status.color = TERMINATE;
             return send_message(next, &color);
@@ -652,11 +677,11 @@ int read_message(int prev, int* color){
         printf("MPI_Recv failed.\n");
         return -1;
     }
-	
+
     if( status.color == TERMINATE )  return TERMINATE;
 
     status.count += message_count;
-    
+
     if ( *color == 1)
         status.color = 1;
 
@@ -692,32 +717,32 @@ int ring(int next,int prev, int* color){
     int not_recv;
     MPI_Status st;
     int terminate;
-    
+
     if( MPI_Iprobe(prev, 0, MPI_COMM_WORLD,&not_recv, &st) == -1){
         printf("MPI_Probe failed.\n");
         return -1;
     }
-    
+
     if(not_recv)
         do{
             terminate = read_message(prev, color);
             if (rank != n_process - 1 || terminate != TERMINATE) send_message(next, color);
             if (terminate == TERMINATE) return TERMINATE;
         }while(1);
-    
+
     return 0;
 }
 
-int ring_waiting(int next,int prev, int* color){ 	
+int ring_waiting(int next,int prev, int* color){
     int terminate;
-    
+
     do{
         terminate = read_message(prev, color);
-            
+
         if (rank != n_process - 1 || terminate != TERMINATE) send_message(next, color);
         if (terminate == TERMINATE) return TERMINATE;
     }while(1);
-    
+
     return 0;
 }
 
@@ -736,7 +761,7 @@ int increasing_no_success_proc(int idproc){
 int print_once(int prev,int next){
 	int stampare = 0;
 	MPI_Status recv_status;
-	
+
 	if(rank == n_process - 1 ){
 		if ( MPI_Recv(&stampare, 1, MPI_INT, prev, 0, MPI_COMM_WORLD, &recv_status) == -1){
 			printf("MPI_Recv failed.\n");
@@ -746,7 +771,7 @@ int print_once(int prev,int next){
 	}else if(rank == 0){
 		if (i_terminated) print_matrix_result(global_matrix);
 		else stampare = 1;
-		
+
 		if ( MPI_Send(&stampare, 1, MPI_INT, next, 0, MPI_COMM_WORLD) == -1){
             printf("MPI_Send failed.\n");
             return -1;
@@ -765,6 +790,6 @@ int print_once(int prev,int next){
             return -1;
         }
 	}
-	
+
 	return 0;
 }
