@@ -83,7 +83,7 @@ int main(int argc, char **argv)
 
 	if(argc<3 || argc>3){
 		printf("\nThe program needs two arguments: \n1)The file containing the puzzle\n2) The dimension o f the puzzle");
-		return 1;
+		return -1;
 	}
 
   //Initialization of the MPI data structures
@@ -100,7 +100,7 @@ int main(int argc, char **argv)
 	if( isNumber(argv[2]) ) size = atoi(argv[2]);
 	else{
 		printf("Il secondo argomento deve essere un intero.\n");
-		return 1;
+		return -1;
 	}
   unknown = size*size;
   block** backup_matrix = malloc_matrix();
@@ -159,7 +159,7 @@ int main(int argc, char **argv)
 		k++;
 	}
 
-	if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
+	//if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
 
 	shuffle(mypart, ppp_effective);
 
@@ -169,7 +169,7 @@ int main(int argc, char **argv)
 	}*/
 	for (k = 0; k < ppp_effective; k++){
 		int j = 0;
-		printf("%d) k = %d, mypart[k] = %d\n", rank, k, mypart[k]);
+		//printf("%d) k = %d, mypart[k] = %d\n", rank, k, mypart[k]);
 		copy_matrix(&global_matrix, &backup_matrix);
 		//Adesso rimane da codificare le possibile soluzioni, il numero 'i' verra codificato come
 		//valore casella 0 + valore casella 1 * size + ecc..
@@ -695,7 +695,7 @@ int send_message(int next, int* color){
     if(*color == TERMINATE_NO_SUCC){
         //Imposto il colore uguale al mio rank per far capire al processo 0 chi ha terminato
         status.color = rank;
-	printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
+	//printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
         if ( MPI_Send(&status, 1, message_datatype, next, 1, MPI_COMM_WORLD) == -1){
             printf("MPI_Send failed.\n");
             return -1;
@@ -706,7 +706,7 @@ int send_message(int next, int* color){
             printf("MPI_Send failed.\n");
             return -1;
         }
-	printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
+	//printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
         if(status.color == TERMINATE) return TERMINATE;
     }
 

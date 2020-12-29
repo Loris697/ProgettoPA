@@ -1,10 +1,79 @@
-4	1	1	5	1	2	1	3	1	6	
-1	1	2	3	4	5	6	7	8	9	
-2	3	1	1	5	1	4	1	6	1	
+0) P Total = 100000
+8) k = 0, mypart[k] = 73064
+6) k = 0, mypart[k] = 97926
+10) k = 0, mypart[k] = 24522
+0) k = 0, mypart[k] = 79296
+14) k = 0, mypart[k] = 44590
+5) k = 0, mypart[k] = 17749
+9) k = 0, mypart[k] = 47705
+13) k = 0, mypart[k] = 61165
+1) k = 0, mypart[k] = 89633
+13) k = 1, mypart[k] = 55101
+2) k = 0, mypart[k] = 73250
+15) k = 0, mypart[k] = 13791
+7) k = 0, mypart[k] = 49303
+11) k = 0, mypart[k] = 5323
+3) k = 0, mypart[k] = 43923
+12) k = 0, mypart[k] = 72108
+4) k = 0, mypart[k] = 71188
+Process 0 send a message (0) to 1
+Process 1 send a message (0) to 2
+Process 0 send a message (31000) to 1
+Process 13 send a message (0) to 0
+Process 1 send a message (31000) to 2
+Process 2 send a message (0) to 3
+Process 2 send a message (31000) to 3
+Process 3 send a message (0) to 4
+Process 3 send a message (31000) to 4
+Process 4 send a message (0) to 5
+Process 4 send a message (31000) to 5
+5) k = 1, mypart[k] = 89813
+Process 5 send a message (0) to 6
+Process 5 send a message (31000) to 6
+15) k = 1, mypart[k] = 15007
+9) k = 1, mypart[k] = 85273
+6) k = 1, mypart[k] = 42934
+Process 6 send a message (0) to 7
+Process 6 send a message (31000) to 7
+12) k = 1, mypart[k] = 56268
+10) k = 1, mypart[k] = 82106
+11) k = 1, mypart[k] = 51931
+14) k = 1, mypart[k] = 32894
+7) k = 1, mypart[k] = 5959
+Process 7 send a message (0) to 8
+Process 7 send a message (31000) to 8
+8) k = 1, mypart[k] = 4184
+Process 8 send a message (0) to 9
+Process 8 send a message (31000) to 9
+15) k = 2, mypart[k] = 48831
+12) k = 2, mypart[k] = 67084
+9) k = 2, mypart[k] = 83529
+Process 9 send a message (0) to 10
+Process 9 send a message (31000) to 10
+10) k = 2, mypart[k] = 27738
+Process 10 send a message (0) to 11
+Process 10 send a message (31000) to 11
+11) k = 2, mypart[k] = 96139
+Process 11 send a message (0) to 12
+Process 11 send a message (31000) to 12
+15) k = 3, mypart[k] = 88143
+12) k = 3, mypart[k] = 78508
+Process 13 send a message (0) to 14
+Process 13 send a message (31000) to 14
+Process 12 send a message (0) to 13
+Process 12 send a message (31000) to 13
+15) k = 4, mypart[k] = 39087
+14) k = 2, mypart[k] = 50622
+Process 14 send a message (0) to 15
+Process 14 send a message (31000) to 15
+Process 15 send a message (0) to 0
+7	10	3	10	8	9	1	1	2	1	
+1	1	2	3	1	4	1	5	6	7	
+1	1	1	2	3	5	4	1	7	1	
+2	3	1	1	4	1	5	6	8	9	
 1	2	1	1	1	3	1	4	1	5	
-3	4	5	2	1	6	7	8	9	10	
+3	4	5	6	1	2	7	1	9	8	
 1	5	1	4	1	1	1	2	1	3	
-5	1	3	1	2	1	1	1	4	7	
-6	7	4	8	3	9	2	1	5	1	
-1	6	1	7	1	4	1	5	1	2	
-7	8	6	1	9	10	3	1	2	1	
+4	1	6	1	2	7	3	1	5	10	
+5	6	4	7	1	8	1	3	1	1	
+1	7	1	5	6	10	2	1	3	1	
