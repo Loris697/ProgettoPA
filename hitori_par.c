@@ -246,6 +246,7 @@ int solve_hitori(block** matrix,int i,int unknown){
     if(unknown == 0){
         //printf("Returnung to main.\n" );
         global_matrix = matrix;
+		free_matrix(backup_matrix);
         return 0;
     }
 
@@ -274,7 +275,10 @@ int solve_hitori(block** matrix,int i,int unknown){
       //printf("Applied succesfully rules. \n");
   		int return_code = solve_hitori(backup_matrix, i + 1, unknown);
   		if( return_code == 0) return 0;
-  		else if(return_code == -2) return -2;
+		else if (return_code == -2) {
+			free_matrix(backup_matrix);
+			return -2;
+		}
     }
 
     //failed white trying black
@@ -292,8 +296,12 @@ int solve_hitori(block** matrix,int i,int unknown){
     //printf("Applied succesfully rules. \n");
 		int return_code = solve_hitori(matrix, i + 1, unknown);
 		if( return_code == 0) return 0;
-		else if(return_code == -2) return -2;
+		else if (return_code == -2) {
+			free_matrix(backup_matrix);
+			return -2;
+		}
     }
+	free_matrix(backup_matrix);
     return -1;
 }
 
@@ -401,9 +409,11 @@ int find_connection_of_white(int row,int col,block** matrix){
         int r = j / size;
         int c = j % size;
         if(flag_vector[j] == 0 && matrix[r][c].state == 'w'){
+			free(flag_vector);
             return -1;
         }
     }
+	free(flag_vector);
     return 0;
 }
 

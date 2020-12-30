@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include <ctype.h>
 
-#define PART_PER_PROCESS 4024
+#define PART_PER_PROCESS 1600000
 #define TERMINATE 31000
 #define TERMINATE_NO_SUCC 31001
 
@@ -72,7 +72,6 @@ int ring_waiting(int next,int prev, int* color);
 int start_termination(int next,int prev);
 int increasing_no_success_proc(int idproc);
 int print_once(int prev,int next);
-void shuffle(int *array, size_t n);
 int isNumber(char number[]);
 
 int main(int argc, char **argv)
@@ -142,7 +141,7 @@ int main(int argc, char **argv)
 	MPI_Barrier(MPI_COMM_WORLD);
 	double time = - MPI_Wtime();
 
-        //Dividing the work at least 8 part per process to better balance the workload
+       //Dividing the work at least 8 part per process to better balance the workload
         //Discover how many part there are (questa volta devo considerare il logaritmo di "size" perchè ogni nodo mi genererà
 	//"size" nodi figli)
 	n_cell_assigned = (int) ceil(logbase((double)size,(double) n_process * PART_PER_PROCESS));
@@ -153,15 +152,19 @@ int main(int argc, char **argv)
 	int return_code = 1;
 	int k = 0;
 	//printf("%d) PPP = %d\n", rank, ppp_effective);
+	//printf("%d) celle = %d\n", rank, n_cell_assigned);
 	int *mypart = (int *) malloc(sizeof(int)*(ppp_effective));
 	for (i = rank; i < parts; i = i + n_process){
 		mypart[k] = i;
 		k++;
 	}
 
-	//if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
+	if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
 
-	shuffle(mypart, ppp_effective);
+	struct timeval t;
+	gettimeofday(&t, 0);
+
+	srand(t.tv_usec);
 
 	/*if(rank == 0){
 		for (k = 0; k < ppp_effective; k++) printf("%d ", mypart[k]);
@@ -169,18 +172,28 @@ int main(int argc, char **argv)
 	}*/
 	for (k = 0; k < ppp_effective; k++){
 		int j = 0;
-		//printf("%d) k = %d, mypart[k] = %d\n", rank, k, mypart[k]);
 		copy_matrix(&global_matrix, &backup_matrix);
 		//Adesso rimane da codificare le possibile soluzioni, il numero 'i' verra codificato come
 		//valore casella 0 + valore casella 1 * size + ecc..
 		//Una rappresentazione in base size
-		int temp = mypart[k];
+		//Prendo un indice in maniera psedo casuale
+		int index = rand() % ppp_effective;
+
+		int temp = mypart[index];
+
+		printf("%d) k = %d, mypart[index] = %d\n", rank, k, mypart[index]);
 		for(j = 0; j < n_cell_assigned; j++){
 			int r = j / size;
 			int c = j % size;
 			backup_matrix[r][c].value = (temp % size) + 1;
 			temp = temp/ size;
 		}
+		//Elimino l'indice che sto considerando
+		ppp_effective--;
+		temp = mypart[index];
+		mypart[index] = mypart[ppp_effective];
+		mypart[ppp_effective] = temp;
+
 		//print_matrix(backup_matrix);
 
 		//Se il ciclo non si è concluso
@@ -238,6 +251,11 @@ int solve_hitori(block** matrix,int i,int unknown){
 	int r = i / size;
 	int c = i % size;
 
+	//printf("\n");
+	//print_matrix_result(matrix);
+	//printf("celle = %d \n", n_cell_assigned);
+	//If the white ipotesis is not correct
+	block** backup_matrix = malloc_matrix();
 	int next = (rank + 1)%n_process;
 	int prev = (rank + n_process - 1)%n_process;
 	int color = 0; // 0 = white 1 = black
@@ -247,50 +265,72 @@ int solve_hitori(block** matrix,int i,int unknown){
 	//Prima di iniziare i calcoli il processo zero controlla se ci sono messaggi di terminazione
 	//-2 significa terminazione immediata
 	if(rank == 0){
-		if( check_for_termination(next, prev)) return -2;
+		if (check_for_termination(next, prev)) {
+			free_matrix(backup_matrix);
+			return -2;
+		}
 	}else{
-		if( ring(next, prev, &color)) return -2;
+		if (ring(next, prev, &color)) {
+			free_matrix(backup_matrix);
+			return -2;
+		}
 	}
 
 	//If I have 0 unknown I have solved the puzzle :)
 	if(unknown == 0){
 		//printf("%d) Solution found.\n", rank);
 		global_matrix = matrix;
+		free_matrix(backup_matrix);
 		return 0;
 	}
 
 	for(int set_value = 1; set_value <= size; set_value++){
+		//char ver = 'y';
 		//Verifico che la matrice non mi sia stata già assegnata
-		if ( i > n_cell_assigned)
+		if (i >= n_cell_assigned)
 			matrix[r][c].value = set_value;
+		/*else
+			printf("Non posso modificare %d (elemento %d) \n", matrix[r][c].value, c);*/
+
+		/*while(ver != 'g')
+			scanf("%c\n", &ver);*/
 
 		//tring to set current block to white
 		node_count++;
 		matrix[r][c].state = 'w';
+		copy_matrix(&matrix, &backup_matrix);
 
 		//printf("cella = %d, valore = %d\n", i, set_value);
 
 		//If the function apply rule return -1 means that it failed
-		if( apply_rule(&matrix, unknown- 1) != -1){
-			int return_code = solve_hitori(matrix, i + 1, unknown-1);
+		if( apply_rule(&backup_matrix, unknown- 1) != -1){
+			int return_code = solve_hitori(backup_matrix, i + 1, unknown-1);
 			if( return_code == 0) return 0;
-			else if(return_code == -2) return -2;
+			else if (return_code == -2) {
+				free_matrix(backup_matrix);
+				return -2;
+			}
 		}
 
 		//failed white trying black
 		node_count++;
 		matrix[r][c].state = 'b';
+		copy_matrix(&matrix, &backup_matrix);
 
-		if(apply_rule(&matrix, unknown-1) != - 1){
-			int return_code = solve_hitori(matrix, i + 1, unknown-1);
+		if(apply_rule(&backup_matrix, unknown-1) != - 1){
+			int return_code = solve_hitori(backup_matrix, i + 1, unknown-1);
 			if( return_code == 0) return 0;
-			else if(return_code == -2) return -2;
+			else if (return_code == -2) {
+				free_matrix(backup_matrix);
+				return -2;
+			}
         }
 
 	//Interrompo il ciclo non posso modificare il valore
 	if ( i < n_cell_assigned) break;
     }
-
+	if (i == 0) print_matrix_result(matrix);
+	free_matrix(backup_matrix);
     return -1;
 }
 
@@ -532,26 +572,6 @@ int print_matrix_result(block** matrix){
 
 double logbase(int base, int x) {
     return log((double) x) / log((double)base);
-}
-
-void shuffle(int *array, size_t n)
-{
-    struct timeval t;
-    gettimeofday(&t, 0);
-
-    srand(t.tv_usec);
-
-    if (n > 1)
-    {
-        size_t i;
-        for (i = 0; i < n - 1; i++)
-        {
-          size_t j = i + rand() / (RAND_MAX / (n - i) + 1);
-          int t = array[j];
-          array[j] = array[i];
-          array[i] = t;
-        }
-    }
 }
 
 int isNumber(char number[])
