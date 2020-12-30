@@ -250,7 +250,6 @@ int solve_hitori(block** matrix,int i,int unknown){
 	//My block's row and colum
 	int r = i / size;
 	int c = i % size;
-
 	//printf("\n");
 	//print_matrix_result(matrix);
 	//printf("celle = %d \n", n_cell_assigned);
@@ -284,11 +283,13 @@ int solve_hitori(block** matrix,int i,int unknown){
 		return 0;
 	}
 
+	int start_value = matrix[r][c].value;
+
 	for(int set_value = 1; set_value <= size; set_value++){
 		//char ver = 'y';
 		//Verifico che la matrice non mi sia stata già assegnata
 		if (i >= n_cell_assigned)
-			matrix[r][c].value = set_value;
+			matrix[r][c].value = (start_value  + set_value) % set_value + 1;
 		/*else
 			printf("Non posso modificare %d (elemento %d) \n", matrix[r][c].value, c);*/
 
