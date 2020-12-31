@@ -11,7 +11,7 @@ do
 		for (( ; SOLUTION_FOUND < GOAL ; ))
 		do
 			echo "CERCO SOLUZIONE PER SOLUTION = "$SOLUTION_FOUND", SIZE = "$SIZE", PROCESS ="$PROCESS
-			mpirun -n $PROCESS ./hitori_par "hitori"$SIZE"by"$SIZE"/("$SIZE")solution"$SOLUTION_FOUND".in" $SIZE 1> /dev/null
+			mpirun -n $PROCESS --oversubscribe ./hitori_par "hitori"$SIZE"by"$SIZE"/("$SIZE")solution"$SOLUTION_FOUND".in" $SIZE 1> /dev/null
 			SOLUTION_FOUND=$((SOLUTION_FOUND+1))
 		done
 	done
