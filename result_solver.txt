@@ -1,0 +1,2366 @@
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 18 node by process 0.
+dim = 5)Execution time: 0.000187
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 12 node by process 0.
+dim = 5)Execution time: 0.000190
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 11 node by process 0.
+dim = 5)Execution time: 0.000158
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 0.
+dim = 5)Execution time: 0.000167
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 0.
+dim = 5)Execution time: 0.000209
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 0.
+dim = 5)Execution time: 0.000175
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 14 node by process 0.
+dim = 5)Execution time: 0.000156
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 5 node by process 0.
+dim = 5)Execution time: 0.000157
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 0.
+dim = 5)Execution time: 0.000275
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 5 node by process 0.
+dim = 5)Execution time: 0.000160
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 1.
+dim = 5)Execution time: 0.000189
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 25 node by process 0.
+dim = 5)Execution time: 0.000084
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 0.
+dim = 5)Execution time: 0.000197
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 8 node by process 0.
+Examinated 6 node by process 1.
+dim = 5)Execution time: 0.000064
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 11 node by process 1.
+dim = 5)Execution time: 0.000186
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keydim = 5)Execution time: 0.000163
+Examinated 11 node by process 1.
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keydim = 5)Execution time: 0.000162
+Examinated 6 node by process 1.
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 4 node by process 1.
+dim = 5)Execution time: 0.000132
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 15 node by process 0.
+Examinated 11 node by process 1.
+dim = 5)Execution time: 0.000078
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 5 node by process 0.
+dim = 5)Execution time: 0.000152
+Examinated 3 node by process 1.
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 9 node by process 1.
+dim = 5)Execution time: 0.000182
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 17 node by process 0.
+dim = 5)Execution time: 0.000135
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 16 node by process 0.
+dim = 5)Execution time: 0.000066
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 6 node by process 1.
+Examinated 6 node by process 0.
+dim = 5)Execution time: 0.000085
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 1.
+dim = 5)Execution time: 0.000075
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 1.
+dim = 5)Execution time: 0.000192
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 7 node by process 1.
+dim = 5)Execution time: 0.000073
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 19 node by process 1.
+dim = 5)Execution time: 0.000091
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 1.
+Examinated 11 node by process 2.
+dim = 5)Execution time: 0.000171
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 2 node by process 1.
+Examinated 2 node by process 2.
+dim = 5)Execution time: 0.000077
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 12 node by process 5.
+dim = 5)Execution time: 0.000198
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 0.
+dim = 5)Execution time: 0.000202
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 8 node by process 0.
+dim = 5)Execution time: 0.000107
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 4 node by process 4.
+Examinated 4 node by process 5.
+Examinated 8 node by process 0.
+dim = 5)Execution time: 0.000486
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 13 node by process 3.
+dim = 5)Execution time: 0.000179
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 13 node by process 3.
+dim = 5)Execution time: 0.000102
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 5.
+dim = 5)Execution time: 0.000082
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 5.
+dim = 5)Execution time: 0.000182
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 8 node by process 2.
+Examinated 6 node by process 3.
+Examinated 14 node by process 1.
+Examinated 8 node by process 4.
+Examinated 6 node by process 5.
+dim = 5)Execution time: 0.000234
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 2 node by process 1.
+Examinated 2 node by process 2.
+Examinated 2 node by process 5.
+dim = 5)Execution time: 0.000279
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 1.
+dim = 5)Execution time: 0.000544
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 4.
+dim = 5)Execution time: 0.000391
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 8 node by process 4.
+dim = 5)Execution time: 0.000468
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 4 node by process 5.
+Examinated 4 node by process 4.
+dim = 5)Execution time: 0.000205
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 19 node by process 1.
+dim = 5)Execution time: 0.000416
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 19 node by process 1.
+dim = 5)Execution time: 0.000258
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 1.
+dim = 5)Execution time: 0.000450
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 14 node by process 1.
+dim = 5)Execution time: 0.000435
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 6 node by process 4.
+Examinated 6 node by process 5.
+Examinated 8 node by process 0.
+Examinated 8 node by process 1.
+Examinated 11 node by process 2.
+dim = 5)Execution time: 0.000466
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 2 node by process 1.
+Examinated 2 node by process 2.
+dim = 5)Execution time: 0.000116
+Examinated 2 node by process 5.
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 11 node by process 5.
+dim = 5)Execution time: 0.000395
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 21 node by process 4.
+dim = 5)Execution time: 0.000366
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 7 node by process 0.
+dim = 5)Execution time: 0.000503
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 7 node by process 0.
+Examinated 5 node by process 5.
+Examinated 5 node by process 4.
+dim = 5)Execution time: 0.000365
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 1.
+dim = 5)Execution time: 0.000526
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 1.
+dim = 5)Execution time: 0.000613
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 10 node by process 5.
+dim = 5)Execution time: 0.000327
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 23 node by process 9.
+dim = 5)Execution time: 0.000651
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 6 node by process 8.
+Examinated 6 node by process 5.
+Examinated 7 node by process 6.
+Examinated 6 node by process 9.
+dim = 5)Execution time: 0.000416
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 3 node by process 5.
+Examinated 3 node by process 2.
+Examinated 3 node by process 1.
+dim = 5)Execution time: 0.000511
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 9 node by process 9.
+dim = 5)Execution time: 0.000674
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 25 node by process 4.
+dim = 5)Execution time: 0.000952
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 9 node by process 4.
+dim = 5)Execution time: 0.000597
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 5 node by process 4.
+Examinated 5 node by process 5.
+dim = 5)Execution time: 0.000600
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 1.
+dim = 5)Execution time: 0.000895
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 1.
+dim = 5)Execution time: 0.000820
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 8 node by process 9.
+dim = 5)Execution time: 0.000666
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 25 node by process 1.
+dim = 5)Execution time: 0.001090
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 6 node by process 1.
+Examinated 6 node by process 5.
+Examinated 6 node by process 4.
+dim = 5)Execution time: 0.000500
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 5, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 3 node by process 5.
+Examinated 3 node by process 2.
+Examinated 3 node by process 1.
+dim = 5)Execution time: 0.000496
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 0.
+dim = 10)Execution time: 0.001170
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 0.
+dim = 10)Execution time: 0.001045
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 31 node by process 0.
+dim = 10)Execution time: 0.001323
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 14 node by process 0.
+dim = 10)Execution time: 0.001078
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 17 node by process 0.
+dim = 10)Execution time: 0.001097
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 30 node by process 0.
+dim = 10)Execution time: 0.001111
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 31 node by process 0.
+dim = 10)Execution time: 0.001261
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 27 node by process 0.
+dim = 10)Execution time: 0.001077
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 19 node by process 0.
+dim = 10)Execution time: 0.000983
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 30 node by process 0.
+dim = 10)Execution time: 0.001146
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 37 node by process 0.
+dim = 10)Execution time: 0.001336
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 0.
+dim = 10)Execution time: 0.000305
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keydim = 10)Execution time: 0.001308
+Examinated 23 node by process 1.
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 13 node by process 1.
+Examinated 14 node by process 0.
+dim = 10)Execution time: 0.001219
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 16 node by process 1.
+dim = 10)Execution time: 0.001107
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 31 node by process 1.
+dim = 10)Execution time: 0.001096
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 1.
+dim = 10)Execution time: 0.000333
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keydim = 10)Execution time: 0.000945
+Examinated 19 node by process 1.
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 32 node by process 0.
+dim = 10)Execution time: 0.000246
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 39 node by process 0.
+dim = 10)Execution time: 0.001077
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 25 node by process 2.
+dim = 10)Execution time: 0.000862
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 1.
+dim = 10)Execution time: 0.001283
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 23 node by process 1.
+dim = 10)Execution time: 0.000658
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 14 node by process 1.
+Examinated 15 node by process 0.
+dim = 10)Execution time: 0.000907
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 2.
+dim = 10)Execution time: 0.000415
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 32 node by process 1.
+dim = 10)Execution time: 0.000484
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 1.
+dim = 10)Execution time: 0.001393
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 1.
+dim = 10)Execution time: 0.000550
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 21 node by process 2.
+dim = 10)Execution time: 0.000872
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 2.
+dim = 10)Execution time: 0.000786
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 4.
+dim = 10)Execution time: 0.000665
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 17 node by process 1.
+Examinated 20 node by process 0.
+dim = 10)Execution time: 0.000475
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 3.
+dim = 10)Execution time: 0.000772
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 27 node by process 4.
+dim = 10)Execution time: 0.000573
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 3.
+Examinated 29 node by process 2.
+dim = 10)Execution time: 0.000883
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 29 node by process 1.
+dim = 10)Execution time: 0.000659
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 3.
+dim = 10)Execution time: 0.001154
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 23 node by process 5.
+dim = 10)Execution time: 0.000642
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 34 node by process 0.
+dim = 10)Execution time: 0.000651
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 2.
+dim = 10)Execution time: 0.001309
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 26 node by process 2.
+dim = 10)Execution time: 0.000960
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 4.
+Examinated 19 node by process 5.
+dim = 10)Execution time: 0.000888
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 1.
+dim = 10)Execution time: 0.000639
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 29 node by process 1.
+Examinated 22 node by process 5.
+Examinated 30 node by process 0.
+Examinated 23 node by process 4.
+Examinated 29 node by process 2.
+dim = 10)Execution time: 0.001286
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 5.
+dim = 10)Execution time: 0.000869
+Examinated 29 node by process 2.
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 41 node by process 1.
+dim = 10)Execution time: 0.001395
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 1.
+dim = 10)Execution time: 0.000990
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 1.
+dim = 10)Execution time: 0.001136
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 36 node by process 2.
+dim = 10)Execution time: 0.000686
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 39 node by process 2.
+dim = 10)Execution time: 0.001187
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 29 node by process 2.
+dim = 10)Execution time: 0.003888
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 30 node by process 5.
+dim = 10)Execution time: 0.000830
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 1.
+dim = 10)Execution time: 0.001417
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 0.
+Examinated 24 node by process 9.
+Examinated 20 node by process 10.
+Examinated 18 node by process 2.
+dim = 10)Execution time: 0.001199
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 1.
+Examinated 30 node by process 10.
+Examinated 33 node by process 5.
+dim = 10)Execution time: 0.001348
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 1.
+dim = 10)Execution time: 0.000973
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 1.
+dim = 10)Execution time: 0.002498
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 5.
+dim = 10)Execution time: 0.000793
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 23 node by process 6.
+dim = 10)Execution time: 0.000798
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 20 node by process 2.
+dim = 10)Execution time: 0.001054
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 39 node by process 2.
+dim = 10)Execution time: 0.001601
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 34 node by process 5.
+dim = 10)Execution time: 0.001572
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 29 node by process 9.
+dim = 10)Execution time: 0.001380
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 1.
+Examinated 23 node by process 5.
+dim = 10)Execution time: 0.001995
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 40 node by process 2.
+Examinated 37 node by process 5.
+Examinated 37 node by process 1.
+dim = 10)Execution time: 0.001188
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 24 node by process 9.
+dim = 10)Execution time: 0.003121
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 37 node by process 1.
+dim = 10)Execution time: 0.000969
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 9.
+dim = 10)Execution time: 0.001031
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 29 node by process 2.
+dim = 10)Execution time: 0.000893
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 10, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 22 node by process 10.
+dim = 10)Execution time: 0.000937
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 46 node by process 0.
+dim = 15)Execution time: 0.006697
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 0.
+dim = 15)Execution time: 0.006630
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 32 node by process 0.
+dim = 15)Execution time: 0.004759
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 34 node by process 0.
+dim = 15)Execution time: 0.005031
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 0.
+dim = 15)Execution time: 0.004549
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 0.
+dim = 15)Execution time: 0.005533
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 0.
+dim = 15)Execution time: 0.005081
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 40 node by process 0.
+dim = 15)Execution time: 0.005895
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 55 node by process 0.
+dim = 15)Execution time: 0.007170
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 0.
+dim = 15)Execution time: 0.007830
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 59 node by process 0.
+dim = 15)Execution time: 0.001704
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 51 node by process 0.
+dim = 15)Execution time: 0.005769
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 32 node by process 0.
+dim = 15)Execution time: 0.004425
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 47 node by process 0.
+dim = 15)Execution time: 0.001254
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 35 node by process 1.
+Examinated 36 node by process 0.
+dim = 15)Execution time: 0.005603
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 1.
+dim = 15)Execution time: 0.005004
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 1.
+dim = 15)Execution time: 0.001323
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 38 node by process 0.
+dim = 15)Execution time: 0.006116
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 50 node by process 0.
+dim = 15)Execution time: 0.002999
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 48 node by process 1.
+dim = 15)Execution time: 0.007285
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 50 node by process 0.
+dim = 15)Execution time: 0.003232
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 45 node by process 0.
+dim = 15)Execution time: 0.006003
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 31 node by process 0.
+dim = 15)Execution time: 0.001339
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 36 node by process 2.
+dim = 15)Execution time: 0.002763
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 38 node by process 1.
+dim = 15)Execution time: 0.005871
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 48 node by process 1.
+dim = 15)Execution time: 0.001650
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 32 node by process 1.
+dim = 15)Execution time: 0.001372
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 46 node by process 0.
+dim = 15)Execution time: 0.002823
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 53 node by process 2.
+dim = 15)Execution time: 0.004980
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 46 node by process 2.
+Examinated 48 node by process 1.
+dim = 15)Execution time: 0.003604
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 0.
+dim = 15)Execution time: 0.003170
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 2.
+dim = 15)Execution time: 0.004902
+Examinated 41 node by process 3.
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 46 node by process 5.
+dim = 15)Execution time: 0.002405
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 49 node by process 0.
+dim = 15)Execution time: 0.005574
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 44 node by process 4.
+dim = 15)Execution time: 0.002023
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 37 node by process 3.
+Examinated 38 node by process 1.
+dim = 15)Execution time: 0.003118
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 3.
+Examinated 31 node by process 1.
+dim = 15)Execution time: 0.002571
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 48 node by process 5.
+dim = 15)Execution time: 0.003319
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 50 node by process 2.
+dim = 15)Execution time: 0.005228
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 44 node by process 3.
+Examinated 47 node by process 2.
+dim = 15)Execution time: 0.003655
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 4.
+dim = 15)Execution time: 0.005519
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 40 node by process 4.
+dim = 15)Execution time: 0.003088
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 37 node by process 4.
+Examinated 38 node by process 5.
+dim = 15)Execution time: 0.005182
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 51 node by process 2.
+dim = 15)Execution time: 0.003484
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 4.
+dim = 15)Execution time: 0.004026
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 37 node by process 5.
+Examinated 38 node by process 4.
+Examinated 42 node by process 1.
+dim = 15)Execution time: 0.003634
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 33 node by process 5.
+dim = 15)Execution time: 0.003530
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 1.
+dim = 15)Execution time: 0.002400
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 52 node by process 2.
+dim = 15)Execution time: 0.006193
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 48 node by process 0.
+dim = 15)Execution time: 0.003226
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 41 node by process 0.
+dim = 15)Execution time: 0.006754
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 53 node by process 0.
+dim = 15)Execution time: 0.004868
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 36 node by process 0.
+Examinated 40 node by process 9.
+dim = 15)Execution time: 0.003527
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 38 node by process 6.
+dim = 15)Execution time: 0.008449
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 52 node by process 9.
+dim = 15)Execution time: 0.003936
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 39 node by process 1.
+Examinated 39 node by process 5.
+Examinated 38 node by process 2.
+Examinated 40 node by process 4.
+Examinated 38 node by process 9.
+dim = 15)Execution time: 0.003562
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 31 node by process 1.
+dim = 15)Execution time: 0.004421
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 6.
+Examinated 51 node by process 1.
+dim = 15)Execution time: 0.004430
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 42 node by process 2.
+dim = 15)Execution time: 0.005635
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 4.
+Examinated 50 node by process 10.
+Examinated 59 node by process 8.
+dim = 15)Execution time: 0.004113
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 43 node by process 4.
+dim = 15)Execution time: 0.003816
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 56 node by process 5.
+Examinated 55 node by process 4.
+dim = 15)Execution time: 0.003545
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 38 node by process 4.
+dim = 15)Execution time: 0.004577
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 44 node by process 2.
+dim = 15)Execution time: 0.010486
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 44 node by process 9.
+dim = 15)Execution time: 0.004230
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 39 node by process 1.
+Examinated 38 node by process 5.
+dim = 15)Execution time: 0.002976
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 28 node by process 9.
+Examinated 33 node by process 5.
+Examinated 34 node by process 4.
+dim = 15)Execution time: 0.002853
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 53 node by process 1.
+dim = 15)Execution time: 0.005395
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 44 node by process 10.
+dim = 15)Execution time: 0.004131
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 15, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 1.
+dim = 15)Execution time: 0.005799
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 71 node by process 0.
+dim = 20)Execution time: 0.022481
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 60 node by process 0.
+dim = 20)Execution time: 0.021354
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 64 node by process 0.
+dim = 20)Execution time: 0.005642
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 71 node by process 0.
+dim = 20)Execution time: 0.021824
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 0.
+dim = 20)Execution time: 0.023882
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 0.
+dim = 20)Execution time: 0.025218
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 67 node by process 0.
+dim = 20)Execution time: 0.023654
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 0.
+dim = 20)Execution time: 0.007536
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 90 node by process 0.
+dim = 20)Execution time: 0.027812
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 67 node by process 0.
+dim = 20)Execution time: 0.024781
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 68 node by process 0.
+Examinated 67 node by process 1.
+dim = 20)Execution time: 0.006099
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 52 node by process 1.
+dim = 20)Execution time: 0.011205
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 1.
+dim = 20)Execution time: 0.011626
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 66 node by process 0.
+dim = 20)Execution time: 0.005319
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 72 node by process 1.
+dim = 20)Execution time: 0.024797
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 1.
+Examinated 81 node by process 0.
+dim = 20)Execution time: 0.006711
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 64 node by process 0.
+dim = 20)Execution time: 0.022023
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 85 node by process 1.
+dim = 20)Execution time: 0.023206
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 1.
+dim = 20)Execution time: 0.024630
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 68 node by process 1.
+dim = 20)Execution time: 0.006604
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 64 node by process 2.
+Examinated 66 node by process 1.
+dim = 20)Execution time: 0.011719
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 52 node by process 0.
+dim = 20)Execution time: 0.010344
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 1.
+dim = 20)Execution time: 0.006309
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 0.
+dim = 20)Execution time: 0.030346
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 71 node by process 2.
+Examinated 71 node by process 1.
+dim = 20)Execution time: 0.011110
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 1.
+dim = 20)Execution time: 0.007907
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 63 node by process 2.
+dim = 20)Execution time: 0.011155
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 87 node by process 0.
+Examinated 84 node by process 1.
+dim = 20)Execution time: 0.015468
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 1.
+dim = 20)Execution time: 0.008107
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 70 node by process 1.
+dim = 20)Execution time: 0.010908
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 61 node by process 0.
+Examinated 66 node by process 2.
+dim = 20)Execution time: 0.007304
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 49 node by process 4.
+Examinated 59 node by process 5.
+dim = 20)Execution time: 0.009210
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 5.
+dim = 20)Execution time: 0.007635
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 67 node by process 2.
+dim = 20)Execution time: 0.017495
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 5.
+Examinated 69 node by process 2.
+dim = 20)Execution time: 0.008021
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 76 node by process 5.
+Examinated 85 node by process 4.
+dim = 20)Execution time: 0.009421
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 72 node by process 5.
+Examinated 75 node by process 3.
+dim = 20)Execution time: 0.011323
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 81 node by process 5.
+dim = 20)Execution time: 0.008531
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 72 node by process 3.
+Examinated 73 node by process 5.
+dim = 20)Execution time: 0.013712
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 66 node by process 5.
+dim = 20)Execution time: 0.007441
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 4.
+Examinated 63 node by process 5.
+dim = 20)Execution time: 0.012845
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 49 node by process 1.
+dim = 20)Execution time: 0.015470
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 61 node by process 1.
+dim = 20)Execution time: 0.016362
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 64 node by process 4.
+Examinated 69 node by process 0.
+dim = 20)Execution time: 0.015194
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 71 node by process 2.
+Examinated 69 node by process 1.
+dim = 20)Execution time: 0.015515
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 4.
+dim = 20)Execution time: 0.014441
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 5.
+Examinated 81 node by process 1.
+dim = 20)Execution time: 0.024264
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 80 node by process 1.
+dim = 20)Execution time: 0.019176
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 1.
+dim = 20)Execution time: 0.015921
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 76 node by process 2.
+dim = 20)Execution time: 0.010719
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 63 node by process 1.
+Examinated 62 node by process 0.
+Examinated 64 node by process 9.
+dim = 20)Execution time: 0.014227
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 50 node by process 2.
+Examinated 58 node by process 6.
+dim = 20)Execution time: 0.012960
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 4.
+Examinated 61 node by process 5.
+dim = 20)Execution time: 0.014331
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 61 node by process 0.
+dim = 20)Execution time: 0.012458
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 5.
+Examinated 68 node by process 8.
+dim = 20)Execution time: 0.015867
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 5.
+dim = 20)Execution time: 0.013279
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 63 node by process 2.
+Examinated 66 node by process 6.
+dim = 20)Execution time: 0.014387
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 1.
+dim = 20)Execution time: 0.015518
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 81 node by process 0.
+Examinated 73 node by process 9.
+dim = 20)Execution time: 0.017956
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 67 node by process 5.
+Examinated 66 node by process 4.
+Examinated 71 node by process 6.
+dim = 20)Execution time: 0.013724
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 62 node by process 1.
+dim = 20)Execution time: 0.027549
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 48 node by process 10.
+dim = 20)Execution time: 0.018699
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 61 node by process 2.
+Examinated 60 node by process 9.
+dim = 20)Execution time: 0.022195
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 63 node by process 4.
+dim = 20)Execution time: 0.019768
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 71 node by process 4.
+dim = 20)Execution time: 0.019011
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 5.
+dim = 20)Execution time: 0.031772
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 69 node by process 9.
+dim = 20)Execution time: 0.018646
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 80 node by process 4.
+Examinated 79 node by process 1.
+dim = 20)Execution time: 0.015041
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 4.
+Examinated 74 node by process 2.
+dim = 20)Execution time: 0.032559
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 20, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 67 node by process 1.
+Examinated 68 node by process 4.
+dim = 20)Execution time: 0.017396
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 93 node by process 0.
+dim = 25)Execution time: 0.040185
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 100 node by process 0.
+dim = 25)Execution time: 0.041629
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 84 node by process 0.
+dim = 25)Execution time: 0.031641
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 0.
+dim = 25)Execution time: 0.014621
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 87 node by process 0.
+dim = 25)Execution time: 0.040720
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 95 node by process 0.
+dim = 25)Execution time: 0.041307
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 0.
+dim = 25)Execution time: 0.039483
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 76 node by process 0.
+dim = 25)Execution time: 0.037513
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 99 node by process 0.
+dim = 25)Execution time: 0.020485
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 94 node by process 0.
+dim = 25)Execution time: 0.041627
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 101 node by process 1.
+dim = 25)Execution time: 0.017125
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 99 node by process 1.
+dim = 25)Execution time: 0.041578
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 1.
+dim = 25)Execution time: 0.014329
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 0.
+dim = 25)Execution time: 0.036241
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 86 node by process 0.
+dim = 25)Execution time: 0.017577
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 96 node by process 0.
+dim = 25)Execution time: 0.040816
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 88 node by process 0.
+Examinated 85 node by process 1.
+dim = 25)Execution time: 0.015383
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 75 node by process 1.
+dim = 25)Execution time: 0.037116
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 113 node by process 0.
+dim = 25)Execution time: 0.018494
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 94 node by process 1.
+Examinated 93 node by process 0.
+dim = 25)Execution time: 0.041886
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 100 node by process 1.
+Examinated 101 node by process 0.
+dim = 25)Execution time: 0.022950
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 100 node by process 1.
+dim = 25)Execution time: 0.027046
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 1.
+dim = 25)Execution time: 0.015569
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 77 node by process 2.
+dim = 25)Execution time: 0.021297
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 85 node by process 0.
+Examinated 86 node by process 2.
+dim = 25)Execution time: 0.029538
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 116 node by process 1.
+dim = 25)Execution time: 0.023051
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 84 node by process 0.
+Examinated 85 node by process 1.
+Examinated 82 node by process 2.
+dim = 25)Execution time: 0.016198
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 1.
+dim = 25)Execution time: 0.021919
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 106 node by process 0.
+dim = 25)Execution time: 0.028308
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 91 node by process 2.
+Examinated 93 node by process 1.
+dim = 25)Execution time: 0.031773
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 90 node by process 1.
+Examinated 100 node by process 5.
+Examinated 93 node by process 3.
+dim = 25)Execution time: 0.033295
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 115 node by process 4.
+Examinated 109 node by process 1.
+dim = 25)Execution time: 0.022257
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 3.
+Examinated 82 node by process 2.
+dim = 25)Execution time: 0.024528
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 4.
+dim = 25)Execution time: 0.018230
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 85 node by process 4.
+Examinated 92 node by process 5.
+dim = 25)Execution time: 0.021866
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 106 node by process 5.
+Examinated 103 node by process 1.
+dim = 25)Execution time: 0.020554
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 80 node by process 1.
+Examinated 81 node by process 2.
+dim = 25)Execution time: 0.022175
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 3.
+Examinated 74 node by process 2.
+dim = 25)Execution time: 0.016988
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 107 node by process 1.
+dim = 25)Execution time: 0.027056
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 92 node by process 5.
+dim = 25)Execution time: 0.020190
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 97 node by process 2.
+dim = 25)Execution time: 0.030008
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 112 node by process 4.
+dim = 25)Execution time: 0.031065
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 5.
+dim = 25)Execution time: 0.029515
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 83 node by process 4.
+dim = 25)Execution time: 0.028921
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 85 node by process 4.
+dim = 25)Execution time: 0.033325
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 105 node by process 0.
+dim = 25)Execution time: 0.030604
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 79 node by process 4.
+Examinated 80 node by process 5.
+Examinated 83 node by process 1.
+dim = 25)Execution time: 0.030300
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 5.
+Examinated 74 node by process 2.
+Examinated 74 node by process 1.
+dim = 25)Execution time: 0.028889
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 118 node by process 1.
+Examinated 109 node by process 5.
+dim = 25)Execution time: 0.036410
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 92 node by process 5.
+Examinated 92 node by process 1.
+dim = 25)Execution time: 0.033544
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 90 node by process 0.
+Examinated 93 node by process 8.
+dim = 25)Execution time: 0.032662
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 105 node by process 5.
+Examinated 103 node by process 2.
+Examinated 108 node by process 9.
+dim = 25)Execution time: 0.036885
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 85 node by process 0.
+Examinated 80 node by process 8.
+dim = 25)Execution time: 0.037298
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 83 node by process 0.
+dim = 25)Execution time: 0.029960
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 89 node by process 0.
+Examinated 91 node by process 4.
+dim = 25)Execution time: 0.042011
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 105 node by process 9.
+Examinated 100 node by process 8.
+dim = 25)Execution time: 0.033686
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 80 node by process 0.
+Examinated 81 node by process 4.
+dim = 25)Execution time: 0.033115
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 74 node by process 4.
+Examinated 73 node by process 10.
+Examinated 73 node by process 9.
+Examinated 73 node by process 1.
+Examinated 73 node by process 5.
+dim = 25)Execution time: 0.030777
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 107 node by process 5.
+dim = 25)Execution time: 0.050223
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 94 node by process 8.
+Examinated 94 node by process 6.
+dim = 25)Execution time: 0.039975
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 94 node by process 2.
+dim = 25)Execution time: 0.047406
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 105 node by process 10.
+dim = 25)Execution time: 0.047461
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 81 node by process 0.
+dim = 25)Execution time: 0.085131
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 78 node by process 10.
+Examinated 87 node by process 9.
+dim = 25)Execution time: 0.030452
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 91 node by process 4.
+dim = 25)Execution time: 0.037460
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 98 node by process 8.
+Examinated 105 node by process 5.
+dim = 25)Execution time: 0.040001
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 80 node by process 8.
+dim = 25)Execution time: 0.038572
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 73 node by process 5.
+Examinated 73 node by process 2.
+dim = 25)Execution time: 0.036004
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 110 node by process 1.
+dim = 25)Execution time: 0.093078
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 25, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 90 node by process 4.
+dim = 25)Execution time: 0.038576
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 114 node by process 0.
+dim = 30)Execution time: 0.060729
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 143 node by process 0.
+dim = 30)Execution time: 0.065865
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 121 node by process 0.
+dim = 30)Execution time: 0.058647
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 138 node by process 0.
+dim = 30)Execution time: 0.064242
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 111 node by process 0.
+dim = 30)Execution time: 0.057885
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 132 node by process 0.
+dim = 30)Execution time: 0.044392
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 122 node by process 0.
+dim = 30)Execution time: 0.058968
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 144 node by process 0.
+dim = 30)Execution time: 0.066203
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 148 node by process 0.
+dim = 30)Execution time: 0.064527
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 136 node by process 0.
+dim = 30)Execution time: 0.064465
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 113 node by process 1.
+dim = 30)Execution time: 0.036183
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 151 node by process 1.
+Examinated 158 node by process 0.
+dim = 30)Execution time: 0.068174
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 120 node by process 1.
+dim = 30)Execution time: 0.060901
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 137 node by process 1.
+dim = 30)Execution time: 0.041862
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 111 node by process 1.
+dim = 30)Execution time: 0.056655
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 134 node by process 1.
+dim = 30)Execution time: 0.062558
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 121 node by process 0.
+Examinated 121 node by process 1.
+dim = 30)Execution time: 0.057961
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 142 node by process 1.
+dim = 30)Execution time: 0.065633
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 143 node by process 0.
+dim = 30)Execution time: 0.050975
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 132 node by process 1.
+dim = 30)Execution time: 0.041807
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 114 node by process 2.
+dim = 30)Execution time: 0.049259
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 147 node by process 2.
+dim = 30)Execution time: 0.052052
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 121 node by process 1.
+dim = 30)Execution time: 0.043147
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 139 node by process 0.
+dim = 30)Execution time: 0.045125
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 122 node by process 2.
+dim = 30)Execution time: 0.043769
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 149 node by process 1.
+dim = 30)Execution time: 0.041879
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 121 node by process 1.
+Examinated 121 node by process 0.
+dim = 30)Execution time: 0.061772
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 141 node by process 1.
+dim = 30)Execution time: 0.044650
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 141 node by process 0.
+dim = 30)Execution time: 0.043066
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 148 node by process 0.
+dim = 30)Execution time: 0.055789
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 120 node by process 5.
+Examinated 127 node by process 4.
+dim = 30)Execution time: 0.049820
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 143 node by process 1.
+Examinated 146 node by process 3.
+dim = 30)Execution time: 0.048166
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 126 node by process 1.
+Examinated 133 node by process 2.
+dim = 30)Execution time: 0.040713
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 145 node by process 5.
+Examinated 147 node by process 3.
+dim = 30)Execution time: 0.049565
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 117 node by process 2.
+Examinated 112 node by process 1.
+dim = 30)Execution time: 0.065192
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 143 node by process 0.
+Examinated 144 node by process 2.
+dim = 30)Execution time: 0.045770
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 122 node by process 5.
+Examinated 122 node by process 1.
+Examinated 122 node by process 4.
+Examinated 123 node by process 3.
+dim = 30)Execution time: 0.070938
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 142 node by process 2.
+dim = 30)Execution time: 0.052587
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 141 node by process 5.
+dim = 30)Execution time: 0.044420
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 137 node by process 2.
+dim = 30)Execution time: 0.048647
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 129 node by process 1.
+dim = 30)Execution time: 0.072701
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 149 node by process 0.
+Examinated 145 node by process 5.
+dim = 30)Execution time: 0.084841
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 128 node by process 5.
+Examinated 127 node by process 4.
+dim = 30)Execution time: 0.093392
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 153 node by process 2.
+dim = 30)Execution time: 0.086569
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 114 node by process 5.
+dim = 30)Execution time: 0.069675
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 142 node by process 1.
+dim = 30)Execution time: 0.075893
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 122 node by process 4.
+Examinated 122 node by process 1.
+dim = 30)Execution time: 0.063529
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 139 node by process 5.
+Examinated 142 node by process 2.
+dim = 30)Execution time: 0.081402
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 139 node by process 0.
+dim = 30)Execution time: 0.073224
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 135 node by process 4.
+dim = 30)Execution time: 0.101265
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 119 node by process 6.
+Examinated 122 node by process 4.
+Examinated 120 node by process 10.
+dim = 30)Execution time: 0.076288
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 159 node by process 1.
+dim = 30)Execution time: 0.091684
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 129 node by process 5.
+Examinated 123 node by process 6.
+dim = 30)Execution time: 0.077291
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 142 node by process 10.
+Examinated 147 node by process 8.
+dim = 30)Execution time: 0.093089
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 114 node by process 10.
+Examinated 113 node by process 9.
+Examinated 114 node by process 8.
+dim = 30)Execution time: 0.072160
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 136 node by process 4.
+Examinated 139 node by process 10.
+dim = 30)Execution time: 0.089430
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 135 node by process 9.
+Examinated 135 node by process 5.
+dim = 30)Execution time: 0.076151
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 140 node by process 4.
+Examinated 141 node by process 0.
+Examinated 139 node by process 5.
+Examinated 142 node by process 10.
+dim = 30)Execution time: 0.088940
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 142 node by process 0.
+dim = 30)Execution time: 0.106374
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 146 node by process 4.
+dim = 30)Execution time: 0.081670
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 120 node by process 8.
+dim = 30)Execution time: 0.098045
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 154 node by process 10.
+dim = 30)Execution time: 0.099388
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 128 node by process 4.
+dim = 30)Execution time: 0.150346
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 147 node by process 0.
+Examinated 143 node by process 8.
+dim = 30)Execution time: 0.084738
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 116 node by process 2.
+Examinated 114 node by process 4.
+dim = 30)Execution time: 0.071962
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 140 node by process 2.
+dim = 30)Execution time: 0.103823
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 132 node by process 9.
+dim = 30)Execution time: 0.127420
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 140 node by process 4.
+dim = 30)Execution time: 0.124715
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 144 node by process 10.
+dim = 30)Execution time: 0.155807
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 30, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 134 node by process 4.
+dim = 30)Execution time: 0.148073
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 196 node by process 0.
+dim = 35)Execution time: 0.103028
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 163 node by process 0.
+dim = 35)Execution time: 0.078108
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 187 node by process 0.
+dim = 35)Execution time: 0.098438
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 164 node by process 0.
+dim = 35)Execution time: 0.092709
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 178 node by process 0.
+dim = 35)Execution time: 0.102082
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 193 node by process 0.
+dim = 35)Execution time: 0.113628
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 181 node by process 0.
+dim = 35)Execution time: 0.099344
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 171 node by process 0.
+dim = 35)Execution time: 0.094921
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 195 node by process 0.
+dim = 35)Execution time: 0.102856
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 179 node by process 0.
+dim = 35)Execution time: 0.099995
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 204 node by process 1.
+dim = 35)Execution time: 0.082930
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 161 node by process 1.
+dim = 35)Execution time: 0.100246
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 186 node by process 1.
+dim = 35)Execution time: 0.101400
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 163 node by process 1.
+Examinated 164 node by process 0.
+dim = 35)Execution time: 0.071373
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 1.
+dim = 35)Execution time: 0.101442
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 202 node by process 0.
+Examinated 201 node by process 1.
+dim = 35)Execution time: 0.084546
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 1.
+dim = 35)Execution time: 0.099482
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 170 node by process 1.
+dim = 35)Execution time: 0.096883
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 188 node by process 1.
+dim = 35)Execution time: 0.105470
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 179 node by process 0.
+dim = 35)Execution time: 0.103366
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 197 node by process 2.
+dim = 35)Execution time: 0.110624
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 160 node by process 1.
+dim = 35)Execution time: 0.080581
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 183 node by process 0.
+dim = 35)Execution time: 0.081585
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 165 node by process 0.
+Examinated 164 node by process 1.
+Examinated 165 node by process 2.
+dim = 35)Execution time: 0.081551
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 174 node by process 1.
+dim = 35)Execution time: 0.088284
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 194 node by process 2.
+dim = 35)Execution time: 0.094424
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 1.
+Examinated 176 node by process 0.
+dim = 35)Execution time: 0.092817
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 171 node by process 1.
+Examinated 172 node by process 0.
+Examinated 171 node by process 2.
+dim = 35)Execution time: 0.076145
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 189 node by process 1.
+dim = 35)Execution time: 0.112411
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 177 node by process 2.
+Examinated 178 node by process 0.
+dim = 35)Execution time: 0.086792
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 195 node by process 5.
+dim = 35)Execution time: 0.159581
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 160 node by process 2.
+Examinated 161 node by process 3.
+dim = 35)Execution time: 0.092175
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 188 node by process 3.
+Examinated 182 node by process 2.
+dim = 35)Execution time: 0.089892
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 171 node by process 5.
+Examinated 178 node by process 4.
+dim = 35)Execution time: 0.083248
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 174 node by process 1.
+Examinated 180 node by process 3.
+dim = 35)Execution time: 0.090590
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 198 node by process 2.
+Examinated 199 node by process 3.
+dim = 35)Execution time: 0.118136
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 4.
+Examinated 185 node by process 2.
+dim = 35)Execution time: 0.089491
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 179 node by process 1.
+Examinated 177 node by process 5.
+dim = 35)Execution time: 0.084731
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 195 node by process 1.
+dim = 35)Execution time: 0.097935
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 177 node by process 1.
+Examinated 176 node by process 3.
+dim = 35)Execution time: 0.091723
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 197 node by process 0.
+dim = 35)Execution time: 0.157475
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 159 node by process 1.
+dim = 35)Execution time: 0.149124
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 180 node by process 4.
+Examinated 182 node by process 2.
+dim = 35)Execution time: 0.153810
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 180 node by process 2.
+Examinated 172 node by process 5.
+dim = 35)Execution time: 0.135853
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 173 node by process 5.
+Examinated 175 node by process 4.
+Examinated 175 node by process 2.
+dim = 35)Execution time: 0.150331
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 193 node by process 2.
+Examinated 199 node by process 5.
+dim = 35)Execution time: 0.161905
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 174 node by process 5.
+dim = 35)Execution time: 0.194359
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 186 node by process 2.
+dim = 35)Execution time: 0.146211
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 182 node by process 2.
+dim = 35)Execution time: 0.156239
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 176 node by process 5.
+Examinated 177 node by process 0.
+dim = 35)Execution time: 0.155550
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 199 node by process 10.
+dim = 35)Execution time: 0.174291
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 161 node by process 10.
+dim = 35)Execution time: 0.162117
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 188 node by process 0.
+dim = 35)Execution time: 0.171105
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 171 node by process 1.
+dim = 35)Execution time: 0.159092
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 176 node by process 2.
+dim = 35)Execution time: 0.163913
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 195 node by process 5.
+Examinated 196 node by process 0.
+Examinated 196 node by process 8.
+Examinated 199 node by process 9.
+dim = 35)Execution time: 0.169893
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 195 node by process 0.
+dim = 35)Execution time: 0.163044
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 2.
+Examinated 176 node by process 6.
+dim = 35)Execution time: 0.147435
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 192 node by process 4.
+Examinated 191 node by process 5.
+dim = 35)Execution time: 0.186867
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 174 node by process 6.
+dim = 35)Execution time: 0.169309
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 202 node by process 9.
+dim = 35)Execution time: 0.344896
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 158 node by process 5.
+dim = 35)Execution time: 0.216553
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 192 node by process 2.
+dim = 35)Execution time: 0.260704
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 174 node by process 4.
+Examinated 171 node by process 8.
+dim = 35)Execution time: 0.304677
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 176 node by process 4.
+Examinated 176 node by process 2.
+dim = 35)Execution time: 0.160156
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 192 node by process 0.
+dim = 35)Execution time: 0.233161
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 182 node by process 4.
+dim = 35)Execution time: 0.319982
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 181 node by process 2.
+Examinated 176 node by process 10.
+dim = 35)Execution time: 0.187958
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 179 node by process 10.
+dim = 35)Execution time: 0.337499
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 35, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 175 node by process 2.
+dim = 35)Execution time: 0.164984
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 220 node by process 0.
+dim = 40)Execution time: 0.156061
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 225 node by process 0.
+dim = 40)Execution time: 0.156571
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 232 node by process 0.
+dim = 40)Execution time: 0.157920
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 239 node by process 0.
+dim = 40)Execution time: 0.175120
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 199 node by process 0.
+dim = 40)Execution time: 0.145431
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 230 node by process 0.
+dim = 40)Execution time: 0.160989
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 249 node by process 0.
+dim = 40)Execution time: 0.171264
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 217 node by process 0.
+dim = 40)Execution time: 0.138537
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 268 node by process 0.
+dim = 40)Execution time: 0.181157
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 232 node by process 0.
+dim = 40)Execution time: 0.154839
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 219 node by process 1.
+dim = 40)Execution time: 0.155258
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 224 node by process 0.
+Examinated 225 node by process 1.
+dim = 40)Execution time: 0.163123
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 226 node by process 1.
+dim = 40)Execution time: 0.161368
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 236 node by process 1.
+Examinated 238 node by process 0.
+dim = 40)Execution time: 0.171740
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 197 node by process 1.
+Examinated 198 node by process 0.
+dim = 40)Execution time: 0.148797
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 229 node by process 0.
+dim = 40)Execution time: 0.169111
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 242 node by process 0.
+dim = 40)Execution time: 0.171783
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 217 node by process 0.
+dim = 40)Execution time: 0.142065
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 266 node by process 1.
+dim = 40)Execution time: 0.188092
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 220 node by process 1.
+dim = 40)Execution time: 0.166026
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 220 node by process 1.
+dim = 40)Execution time: 0.156336
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 223 node by process 0.
+Examinated 224 node by process 1.
+dim = 40)Execution time: 0.155709
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 226 node by process 1.
+Examinated 227 node by process 0.
+dim = 40)Execution time: 0.154587
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 235 node by process 1.
+dim = 40)Execution time: 0.162530
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 197 node by process 1.
+dim = 40)Execution time: 0.138409
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 228 node by process 0.
+dim = 40)Execution time: 0.166511
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 238 node by process 0.
+dim = 40)Execution time: 0.167734
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 221 node by process 1.
+dim = 40)Execution time: 0.158491
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 267 node by process 1.
+dim = 40)Execution time: 0.198190
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 218 node by process 2.
+Examinated 220 node by process 1.
+Examinated 221 node by process 0.
+dim = 40)Execution time: 0.146028
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 235 node by process 4.
+Examinated 234 node by process 2.
+dim = 40)Execution time: 0.198826
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 223 node by process 1.
+Examinated 221 node by process 4.
+dim = 40)Execution time: 0.158290
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 225 node by process 1.
+Examinated 226 node by process 4.
+dim = 40)Execution time: 0.159325
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 236 node by process 0.
+Examinated 236 node by process 5.
+dim = 40)Execution time: 0.166928
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 197 node by process 5.
+Examinated 198 node by process 2.
+dim = 40)Execution time: 0.138185
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 226 node by process 4.
+Examinated 228 node by process 3.
+dim = 40)Execution time: 0.159803
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 235 node by process 2.
+Examinated 242 node by process 5.
+dim = 40)Execution time: 0.170229
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 230 node by process 4.
+Examinated 231 node by process 2.
+dim = 40)Execution time: 0.154105
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 271 node by process 4.
+dim = 40)Execution time: 0.187286
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 216 node by process 3.
+Examinated 220 node by process 4.
+dim = 40)Execution time: 0.157602
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 229 node by process 4.
+Examinated 228 node by process 5.
+Examinated 235 node by process 1.
+dim = 40)Execution time: 0.259786
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 221 node by process 2.
+Examinated 221 node by process 4.
+Examinated 222 node by process 5.
+Examinated 223 node by process 1.
+dim = 40)Execution time: 0.267392
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 225 node by process 5.
+Examinated 226 node by process 4.
+dim = 40)Execution time: 0.273263
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 236 node by process 0.
+dim = 40)Execution time: 0.290791
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 198 node by process 4.
+Examinated 199 node by process 0.
+dim = 40)Execution time: 0.245014
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 229 node by process 1.
+dim = 40)Execution time: 0.280105
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 237 node by process 0.
+dim = 40)Execution time: 0.297730
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 229 node by process 4.
+dim = 40)Execution time: 0.272197
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 270 node by process 1.
+Examinated 269 node by process 5.
+dim = 40)Execution time: 0.349490
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 217 node by process 4.
+Examinated 219 node by process 1.
+dim = 40)Execution time: 0.272777
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 227 node by process 10.
+dim = 40)Execution time: 0.283839
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 222 node by process 9.
+dim = 40)Execution time: 0.377685
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 236 node by process 8.
+Examinated 235 node by process 9.
+dim = 40)Execution time: 0.368005
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 235 node by process 0.
+dim = 40)Execution time: 0.461376
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 210 node by process 9.
+Examinated 208 node by process 2.
+dim = 40)Execution time: 0.255713
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 227 node by process 6.
+Examinated 225 node by process 4.
+dim = 40)Execution time: 0.361941
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 246 node by process 5.
+dim = 40)Execution time: 0.314376
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 221 node by process 10.
+dim = 40)Execution time: 0.317894
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 267 node by process 9.
+Examinated 266 node by process 10.
+dim = 40)Execution time: 0.421254
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 230 node by process 0.
+dim = 40)Execution time: 0.373868
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 223 node by process 9.
+dim = 40)Execution time: 0.499732
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 220 node by process 4.
+dim = 40)Execution time: 0.357413
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 227 node by process 4.
+dim = 40)Execution time: 0.336683
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 235 node by process 5.
+dim = 40)Execution time: 0.523981
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 214 node by process 0.
+dim = 40)Execution time: 0.344760
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 228 node by process 1.
+dim = 40)Execution time: 0.402226
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 232 node by process 4.
+dim = 40)Execution time: 0.412954
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 231 node by process 5.
+dim = 40)Execution time: 0.494917
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 268 node by process 2.
+dim = 40)Execution time: 0.440393
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 40, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 231 node by process 5.
+dim = 40)Execution time: 0.467719
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 281 node by process 0.
+dim = 45)Execution time: 0.258977
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 275 node by process 0.
+dim = 45)Execution time: 0.248316
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 303 node by process 0.
+dim = 45)Execution time: 0.281322
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 310 node by process 0.
+dim = 45)Execution time: 0.276980
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 264 node by process 0.
+dim = 45)Execution time: 0.243902
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 263 node by process 0.
+dim = 45)Execution time: 0.245218
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 294 node by process 0.
+dim = 45)Execution time: 0.264397
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 270 node by process 0.
+dim = 45)Execution time: 0.238819
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 307 node by process 0.
+dim = 45)Execution time: 0.261165
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 265 node by process 0.
+dim = 45)Execution time: 0.230171
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 277 node by process 1.
+dim = 45)Execution time: 0.270940
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 272 node by process 1.
+dim = 45)Execution time: 0.258089
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 302 node by process 0.
+dim = 45)Execution time: 0.276038
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 308 node by process 1.
+dim = 45)Execution time: 0.282117
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 261 node by process 1.
+dim = 45)Execution time: 0.259815
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 261 node by process 1.
+dim = 45)Execution time: 0.256829
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 294 node by process 1.
+Examinated 293 node by process 0.
+dim = 45)Execution time: 0.281202
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 267 node by process 1.
+dim = 45)Execution time: 0.268635
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 314 node by process 1.
+dim = 45)Execution time: 0.267112
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 264 node by process 1.
+dim = 45)Execution time: 0.257110
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 277 node by process 1.
+dim = 45)Execution time: 0.266600
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 271 node by process 1.
+dim = 45)Execution time: 0.317404
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 302 node by process 1.
+dim = 45)Execution time: 0.302374
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 307 node by process 1.
+dim = 45)Execution time: 0.284536
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 261 node by process 1.
+dim = 45)Execution time: 0.277630
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 262 node by process 0.
+dim = 45)Execution time: 0.259296
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 293 node by process 1.
+Examinated 292 node by process 2.
+dim = 45)Execution time: 0.286681
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 266 node by process 1.
+dim = 45)Execution time: 0.254585
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 314 node by process 1.
+Examinated 312 node by process 2.
+dim = 45)Execution time: 0.271362
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 265 node by process 1.
+Examinated 265 node by process 2.
+dim = 45)Execution time: 0.249863
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 290 node by process 4.
+Examinated 288 node by process 0.
+dim = 45)Execution time: 0.274046
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 271 node by process 1.
+Examinated 272 node by process 2.
+dim = 45)Execution time: 0.299743
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 299 node by process 4.
+dim = 45)Execution time: 0.290894
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 306 node by process 2.
+Examinated 307 node by process 3.
+dim = 45)Execution time: 0.301928
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 261 node by process 5.
+dim = 45)Execution time: 0.262211
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 262 node by process 1.
+Examinated 262 node by process 2.
+dim = 45)Execution time: 0.264716
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 292 node by process 4.
+Examinated 293 node by process 5.
+dim = 45)Execution time: 0.336777
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 265 node by process 1.
+Examinated 270 node by process 5.
+dim = 45)Execution time: 0.264024
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 309 node by process 3.
+dim = 45)Execution time: 0.295594
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 271 node by process 1.
+Examinated 274 node by process 3.
+dim = 45)Execution time: 0.253000
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 290 node by process 0.
+Examinated 290 node by process 2.
+dim = 45)Execution time: 0.636966
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 272 node by process 2.
+dim = 45)Execution time: 0.459037
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 299 node by process 4.
+dim = 45)Execution time: 0.517842
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 306 node by process 4.
+Examinated 305 node by process 5.
+Examinated 306 node by process 1.
+Examinated 306 node by process 2.
+dim = 45)Execution time: 0.514011
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 267 node by process 2.
+dim = 45)Execution time: 0.609100
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 262 node by process 1.
+dim = 45)Execution time: 0.461745
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 292 node by process 1.
+dim = 45)Execution time: 0.509545
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 269 node by process 4.
+Examinated 270 node by process 5.
+dim = 45)Execution time: 0.453404
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 310 node by process 4.
+dim = 45)Execution time: 0.506781
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 274 node by process 4.
+dim = 45)Execution time: 0.466242
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 276 node by process 1.
+dim = 45)Execution time: 0.683382
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 273 node by process 2.
+Examinated 272 node by process 10.
+dim = 45)Execution time: 0.547119
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 298 node by process 8.
+dim = 45)Execution time: 0.629231
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 305 node by process 4.
+dim = 45)Execution time: 0.688749
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 269 node by process 2.
+dim = 45)Execution time: 0.590998
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 269 node by process 2.
+Examinated 276 node by process 0.
+dim = 45)Execution time: 0.491272
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 291 node by process 9.
+Examinated 290 node by process 10.
+dim = 45)Execution time: 0.515878
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 268 node by process 4.
+dim = 45)Execution time: 0.588383
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 322 node by process 1.
+Examinated 315 node by process 10.
+dim = 45)Execution time: 0.521273
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 270 node by process 1.
+dim = 45)Execution time: 0.598295
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 286 node by process 0.
+dim = 45)Execution time: 1.058560
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 273 node by process 8.
+dim = 45)Execution time: 0.673617
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 300 node by process 1.
+dim = 45)Execution time: 0.938287
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 306 node by process 10.
+dim = 45)Execution time: 0.726965
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 263 node by process 9.
+dim = 45)Execution time: 0.687117
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 277 node by process 1.
+dim = 45)Execution time: 0.801033
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 291 node by process 4.
+dim = 45)Execution time: 1.009998
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 264 node by process 1.
+dim = 45)Execution time: 0.846485
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 317 node by process 10.
+dim = 45)Execution time: 0.699527
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 45, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 274 node by process 0.
+dim = 45)Execution time: 0.797010
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 367 node by process 0.
+dim = 50)Execution time: 0.427367
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 339 node by process 0.
+dim = 50)Execution time: 0.386788
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 358 node by process 0.
+dim = 50)Execution time: 0.406038
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 332 node by process 0.
+dim = 50)Execution time: 0.393276
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 351 node by process 0.
+dim = 50)Execution time: 0.419809
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 362 node by process 0.
+dim = 50)Execution time: 0.418658
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 331 node by process 0.
+dim = 50)Execution time: 0.386571
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 314 node by process 0.
+dim = 50)Execution time: 0.381897
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 334 node by process 0.
+dim = 50)Execution time: 0.375553
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =1
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 361 node by process 0.
+dim = 50)Execution time: 0.398753
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 365 node by process 1.
+Examinated 366 node by process 0.
+dim = 50)Execution time: 0.437151
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 334 node by process 0.
+dim = 50)Execution time: 0.408680
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 355 node by process 1.
+dim = 50)Execution time: 0.424187
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 331 node by process 0.
+dim = 50)Execution time: 0.416939
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 349 node by process 1.
+dim = 50)Execution time: 0.442244
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 362 node by process 0.
+dim = 50)Execution time: 0.439338
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 330 node by process 0.
+dim = 50)Execution time: 0.408257
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 322 node by process 1.
+dim = 50)Execution time: 0.373356
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 332 node by process 1.
+Examinated 333 node by process 0.
+dim = 50)Execution time: 0.393132
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =2
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 0.
+Examinated 360 node by process 1.
+dim = 50)Execution time: 0.449854
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 363 node by process 0.
+Examinated 364 node by process 1.
+dim = 50)Execution time: 0.454567
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 331 node by process 2.
+dim = 50)Execution time: 0.445955
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 357 node by process 2.
+dim = 50)Execution time: 0.439781
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 330 node by process 0.
+dim = 50)Execution time: 0.433046
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 343 node by process 2.
+dim = 50)Execution time: 0.442404
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 2.
+dim = 50)Execution time: 0.440377
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 329 node by process 0.
+dim = 50)Execution time: 0.410843
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 320 node by process 2.
+dim = 50)Execution time: 0.401818
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 332 node by process 0.
+dim = 50)Execution time: 0.395254
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =4
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 359 node by process 1.
+Examinated 358 node by process 2.
+dim = 50)Execution time: 0.443174
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 365 node by process 1.
+dim = 50)Execution time: 0.475193
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 328 node by process 2.
+Examinated 331 node by process 4.
+dim = 50)Execution time: 0.421153
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 356 node by process 4.
+dim = 50)Execution time: 0.443535
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 329 node by process 0.
+dim = 50)Execution time: 0.448507
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 347 node by process 5.
+Examinated 349 node by process 3.
+dim = 50)Execution time: 0.480657
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 359 node by process 4.
+dim = 50)Execution time: 0.454670
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 326 node by process 3.
+dim = 50)Execution time: 0.428170
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 317 node by process 2.
+dim = 50)Execution time: 0.405193
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 331 node by process 1.
+Examinated 332 node by process 3.
+dim = 50)Execution time: 0.417589
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =6
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 358 node by process 3.
+dim = 50)Execution time: 0.460397
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 370 node by process 0.
+dim = 50)Execution time: 0.838946
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 328 node by process 4.
+dim = 50)Execution time: 0.771551
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 356 node by process 2.
+Examinated 352 node by process 5.
+dim = 50)Execution time: 1.027415
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 328 node by process 4.
+Examinated 329 node by process 5.
+dim = 50)Execution time: 0.827287
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 348 node by process 4.
+dim = 50)Execution time: 0.823077
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 359 node by process 2.
+Examinated 360 node by process 0.
+dim = 50)Execution time: 0.811611
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 329 node by process 4.
+Examinated 328 node by process 5.
+Examinated 327 node by process 1.
+dim = 50)Execution time: 0.750137
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 318 node by process 5.
+dim = 50)Execution time: 0.739207
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 331 node by process 1.
+Examinated 332 node by process 2.
+dim = 50)Execution time: 0.740429
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =8
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 5.
+Examinated 359 node by process 1.
+dim = 50)Execution time: 0.833472
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 370 node by process 6.
+dim = 50)Execution time: 0.952067
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 329 node by process 5.
+dim = 50)Execution time: 1.078857
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 361 node by process 0.
+dim = 50)Execution time: 0.925275
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 330 node by process 2.
+Examinated 327 node by process 4.
+dim = 50)Execution time: 1.140413
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 349 node by process 8.
+Examinated 347 node by process 0.
+dim = 50)Execution time: 1.289306
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 8.
+dim = 50)Execution time: 1.005491
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 325 node by process 6.
+Examinated 326 node by process 8.
+dim = 50)Execution time: 0.775145
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 320 node by process 6.
+dim = 50)Execution time: 0.879572
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 334 node by process 10.
+dim = 50)Execution time: 0.841572
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =12
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 359 node by process 9.
+dim = 50)Execution time: 0.991308
+CERCO SOLUZIONE PER SOLUTION = 0, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 4.
+dim = 50)Execution time: 1.564118
+CERCO SOLUZIONE PER SOLUTION = 1, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 328 node by process 0.
+dim = 50)Execution time: 1.277329
+CERCO SOLUZIONE PER SOLUTION = 2, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 353 node by process 1.
+dim = 50)Execution time: 1.453953
+CERCO SOLUZIONE PER SOLUTION = 3, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 326 node by process 8.
+dim = 50)Execution time: 1.220551
+CERCO SOLUZIONE PER SOLUTION = 4, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 343 node by process 10.
+dim = 50)Execution time: 1.292688
+CERCO SOLUZIONE PER SOLUTION = 5, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 361 node by process 1.
+dim = 50)Execution time: 1.216252
+CERCO SOLUZIONE PER SOLUTION = 6, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 325 node by process 10.
+dim = 50)Execution time: 0.931329
+CERCO SOLUZIONE PER SOLUTION = 7, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 313 node by process 1.
+Examinated 318 node by process 4.
+dim = 50)Execution time: 1.328687
+CERCO SOLUZIONE PER SOLUTION = 8, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 332 node by process 1.
+Examinated 334 node by process 8.
+Examinated 333 node by process 9.
+dim = 50)Execution time: 1.494284
+CERCO SOLUZIONE PER SOLUTION = 9, SIZE = 50, PROCESS =16
+Invalid MIT-MAGIC-COOKIE-1 keyExaminated 360 node by process 0.
+Examinated 361 node by process 5.
+dim = 50)Execution time: 1.202661
