@@ -1,65 +1,15 @@
-12) k = 0, mypart[k] = 728716
-13) k = 0, mypart[k] = 394589
-15) k = 0, mypart[k] = 27551
-3) k = 0, mypart[k] = 31699
-0) P Total = 759375
-5) k = 0, mypart[k] = 579221
-0) k = 0, mypart[k] = 184544
-8) k = 0, mypart[k] = 388632
-11) k = 0, mypart[k] = 587995
-2) k = 0, mypart[k] = 97506
-10) k = 0, mypart[k] = 420298
-4) k = 0, mypart[k] = 149956
-6) k = 0, mypart[k] = 141254
-7) k = 0, mypart[k] = 594407
-9) k = 0, mypart[k] = 369577
-1) k = 0, mypart[k] = 702977
-14) k = 0, mypart[k] = 323262
-7) k = 1, mypart[k] = 103351
-Process 15 send a message (0) to 0
-Process 0 send a message (0) to 1
-Process 1 send a message (0) to 2
-Process 2 send a message (0) to 3
-Process 3 send a message (0) to 4
-Process 4 send a message (0) to 5
-Process 5 send a message (0) to 6
-Process 6 send a message (0) to 7
-Process 7 send a message (0) to 8
-Process 8 send a message (0) to 9
-Process 9 send a message (0) to 10
-Process 10 send a message (0) to 11
-Process 11 send a message (0) to 12
-Process 12 send a message (0) to 13
-Process 13 send a message (0) to 14
-Process 15 send a message (0) to 0
-Process 14 send a message (0) to 15
-Process 0 send a message (31000) to 1
-Process 1 send a message (31000) to 2
-Process 6 send a message (31000) to 7
-Process 2 send a message (31000) to 3
-Process 4 send a message (31000) to 5
-Process 3 send a message (31000) to 4
-Process 5 send a message (31000) to 6
-Process 7 send a message (31000) to 8
-Process 8 send a message (31000) to 9
-Process 10 send a message (31000) to 11
-Process 9 send a message (31000) to 10
-Process 12 send a message (31000) to 13
-Process 11 send a message (31000) to 12
-Process 13 send a message (31000) to 14
-Process 14 send a message (31000) to 15
-12	7	3	9	1	13	1	2	1	4	1	5	1	6	1	
-1	1	2	1	3	1	4	5	6	7	8	9	10	11	12	
-1	1	1	2	4	3	1	6	1	5	1	7	1	8	1	
-2	3	1	1	5	1	6	1	4	1	7	1	8	9	10	
-1	2	1	1	6	4	3	7	5	8	9	10	1	12	1	
-3	4	5	1	2	1	1	8	1	6	1	11	7	10	9	
-1	5	1	3	1	2	1	1	7	1	4	1	6	1	8	
-4	6	7	5	8	1	2	1	3	9	10	12	1	13	1	
-1	8	1	4	1	5	1	3	1	1	2	1	9	7	6	
-5	1	4	6	7	8	9	1	2	1	1	3	1	14	1	
-6	9	1	7	1	10	1	4	1	2	1	8	3	5	11	
-1	10	6	1	9	7	5	11	8	1	3	1	1	2	1	
-7	1	8	10	1	6	1	9	1	3	1	2	1	1	4	
-8	11	1	12	10	1	7	13	9	14	5	1	2	1	3	
-1	12	9	8	11	14	10	1	13	1	6	4	5	1	1	
+6	9	14	11	9	11	9	15	10	8	10	12	2	2	3	
+7	13	8	9	1	15	2	8	3	2	12	4	11	10	5	
+2	4	1	6	13	5	14	3	7	15	5	10	5	11	1	
+11	14	12	7	11	2	4	15	8	11	9	8	13	15	6	
+5	6	5	11	2	15	13	14	11	7	8	9	4	2	10	
+2	3	2	3	7	4	2	9	15	13	2	5	3	6	8	
+4	13	13	8	13	3	10	9	5	11	6	2	7	4	9	
+8	5	2	15	4	13	14	6	4	3	14	11	4	7	4	
+2	8	6	3	11	2	5	12	1	5	4	15	9	13	2	
+10	12	1	1	1	9	12	13	10	5	5	14	5	8	1	
+13	12	7	2	12	8	1	4	9	14	10	8	15	15	11	
+8	15	12	13	13	10	5	1	12	4	1	3	14	5	7	
+9	7	4	15	5	5	11	3	13	15	15	2	6	12	6	
+5	9	3	10	6	14	7	2	11	1	5	8	3	4	12	
+3	11	11	12	8	13	15	8	6	8	7	13	1	14	3	

@@ -70,7 +70,6 @@ int ring_waiting(int next,int prev, int* color);
 int start_termination(int next,int prev);
 int increasing_no_success_proc(int idproc);
 int print_once(int prev,int next);
-void shuffle(int *array, size_t n);
 int isNumber(char number[]);
 
 int main(int argc, char **argv)
@@ -236,17 +235,23 @@ int solve_hitori(block** matrix,int i,int unknown){
 
 	//Prima di iniziare i calcoli il processo zero controlla se ci sono messaggi di terminazione
 	//-2 significa terminazione immediata
-    if(rank == 0){
-        if( check_for_termination(next, prev)) return -2;
-	  }else{
-        if( ring(next, prev, &color)) return -2;
+  if(rank == 0){
+    if (check_for_termination(next, prev)) {
+      free_matrix(backup_matrix);
+      return -2;
     }
+  }else{
+    if (ring(next, prev, &color)) {
+      free_matrix(backup_matrix);
+      return -2;
+    }
+  }
 
     //If I have 0 unknown I have solved the puzzle :)
     if(unknown == 0){
         //printf("Returnung to main.\n" );
         global_matrix = matrix;
-		free_matrix(backup_matrix);
+		    free_matrix(backup_matrix);
         return 0;
     }
 
@@ -296,12 +301,9 @@ int solve_hitori(block** matrix,int i,int unknown){
     //printf("Applied succesfully rules. \n");
 		int return_code = solve_hitori(matrix, i + 1, unknown);
 		if( return_code == 0) return 0;
-		else if (return_code == -2) {
-			free_matrix(backup_matrix);
-			return -2;
-		}
+		else if (return_code == -2) return -2;
     }
-	free_matrix(backup_matrix);
+
     return -1;
 }
 
@@ -570,7 +572,7 @@ double logbase(int base, int x) {
 }
 
 
-void shuffle(int *array, size_t n)
+/*void shuffle(int *array, size_t n)
 {
     struct timeval t;
     gettimeofday(&t, 0);
@@ -588,7 +590,7 @@ void shuffle(int *array, size_t n)
           array[i] = t;
         }
     }
-}
+}*/
 
 int isNumber(char number[])
 {

@@ -3,7 +3,7 @@ GOAL=10
 FOLDER=$1
 SIZE=$2
 
-for SIZE in 20
+for SIZE in 5 10 15 20 25 30 35 40 45 50
 do	
 	for PROCESS in 1 2 4 6 8 12 16
 	do

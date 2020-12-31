@@ -6,6 +6,7 @@
 #include <sys/time.h>
 #include <stdint.h>
 #include <ctype.h>
+#include <unistd.h>
 
 #define PART_PER_PROCESS 1600000
 #define TERMINATE 31000
@@ -159,7 +160,7 @@ int main(int argc, char **argv)
 		k++;
 	}
 
-	if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
+	//if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
 
 	struct timeval t;
 	gettimeofday(&t, 0);
@@ -181,7 +182,7 @@ int main(int argc, char **argv)
 
 		int temp = mypart[index];
 
-		printf("%d) k = %d, mypart[index] = %d\n", rank, k, mypart[index]);
+		//printf("%d) k = %d, mypart[index] = %d\n", rank, k, mypart[index]);
 		for(j = 0; j < n_cell_assigned; j++){
 			int r = j / size;
 			int c = j % size;
@@ -240,9 +241,9 @@ int main(int argc, char **argv)
 	if(n_process != 1) print_once(prev, next);
 	else print_matrix_result(global_matrix);
 
-        if (rank == 0) fprintf(stderr, "dim = %d)Execution time: %f\n",size, time);
-        free_matrix(backup_matrix);
-        MPI_Finalize();
+	if (rank == 0) fprintf(stderr, "dim = %d)Execution time: %f\n",size, time);
+	free_matrix(backup_matrix);
+  MPI_Finalize();
 	return 0;
 	}
 
@@ -289,7 +290,7 @@ int solve_hitori(block** matrix,int i,int unknown){
 		//char ver = 'y';
 		//Verifico che la matrice non mi sia stata già assegnata
 		if (i >= n_cell_assigned)
-			matrix[r][c].value = (start_value  + set_value) % set_value + 1;
+			matrix[r][c].value = (start_value  + set_value) % size + 1;
 		/*else
 			printf("Non posso modificare %d (elemento %d) \n", matrix[r][c].value, c);*/
 
@@ -301,7 +302,9 @@ int solve_hitori(block** matrix,int i,int unknown){
 		matrix[r][c].state = 'w';
 		copy_matrix(&matrix, &backup_matrix);
 
-		//printf("cella = %d, valore = %d\n", i, set_value);
+		//printf("cella = %d, valore = %d\n", i, matrix[r][c].value);
+		//print_matrix_result(backup_matrix);
+		//sleep(1);
 
 		//If the function apply rule return -1 means that it failed
 		if( apply_rule(&backup_matrix, unknown- 1) != -1){
@@ -330,7 +333,7 @@ int solve_hitori(block** matrix,int i,int unknown){
 	//Interrompo il ciclo non posso modificare il valore
 	if ( i < n_cell_assigned) break;
     }
-	if (i == 0) print_matrix_result(matrix);
+	//if (i == 0) print_matrix_result(matrix);
 	free_matrix(backup_matrix);
     return -1;
 }
