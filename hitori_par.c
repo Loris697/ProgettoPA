@@ -138,54 +138,19 @@ int main(int argc, char **argv)
 		//Per misurare il tempo
 		MPI_Barrier(MPI_COMM_WORLD);
 		double time = - MPI_Wtime();
-    n_cell_assigned = (int) ceil(logbase((double)2,(double) n_process * PART_PER_PROCESS));
-  	int parts = (int) pow(2, n_cell_assigned);
-  	int ppp_effective = parts / n_process;
-  	if (rank < parts % n_process) ppp_effective++;
-  	int i;
-  	int return_code = 1;
-  	int k = 0;
-  	//printf("%d) PPP = %d\n", rank, ppp_effective);
-  	int *mypart = (int *) malloc(sizeof(int)*(ppp_effective));
-  	for (i = rank; i < parts; i = i + n_process){
-  		mypart[k] = i;
-  		k++;
+    //if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
+
+  	/*if(rank == 0){
+  		for (k = 0; k < ppp_effective; k++) printf("%d ", mypart[k]);
+  		printf("\n");
+  	}*/
+  	int return_code = solve_hitori(backup_matrix,0,unknown);
+  	if(!return_code){
+  			//printf("Solution found.\n");
+  			i_terminated = 1;
+  			fprintf(stderr,"Examinated %d node by process %d.\n", node_count, rank);
   	}
-
-  	//if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
-
-  	//shuffle(mypart, ppp_effective);
-
-  	for (k = 0; k < ppp_effective; k++){
-  		int j = 0;
-  		//printf("%d) k = %d, mypart[k] = %d\n", rank, k, mypart[k]);
-  		copy_matrix(&global_matrix, &backup_matrix);
-
-      int i = mypart[k];
-      for(j = 0; j < n_cell_assigned; j++){
-          int r = j / size;
-          int c = j % size;
-          if( i & (int) pow(2, j)){
-            backup_matrix[r][c].state = 'b';
-            //Se ci sono due neri adiacenti
-            if( i & (int) pow(2, j + 1)) break;
-          }else backup_matrix[r][c].state = 'w';
-        }
-
-        //Se il ciclo non si è concluso
-        if(j != n_cell_assigned) continue;
-
-        //print_matrix(backup_matrix);
-
-        return_code = solve_hitori(backup_matrix,0,unknown-n_cell_assigned);
-        if(!return_code){
-          //printf("Solution found.\n");
-          i_terminated = 1;
-          fprintf(stderr,"Examinated %d node by process %d.\n", node_count, rank);
-          break;
-        }else if(return_code == -2) break;
-
-      }
+    
       if(rank){
         int terminate = TERMINATE_NO_SUCC;
         if ( return_code != -2 ){

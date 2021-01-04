@@ -128,13 +128,15 @@ int main(int argc, char **argv)
 	}
 	MPI_Type_commit(&block_datatype);
 
-        if(!strcmp(input_file ,"stdin"))
+  if(!strcmp(input_file ,"stdin"))
 		read_matrix_from_stdin(&global_matrix);
         else{
 		if( read_matrix_from_file(&global_matrix,input_file) == -1) return -1;
 	}
 
-        /*if (!rank){
+	copy_matrix(&global_matrix, &backup_matrix);
+
+  /*if (!rank){
 		printf("Solving\n");
 		print_matrix(global_matrix);
 	}*/
@@ -142,89 +144,32 @@ int main(int argc, char **argv)
 	MPI_Barrier(MPI_COMM_WORLD);
 	double time = - MPI_Wtime();
 
-       //Dividing the work at least 8 part per process to better balance the workload
-        //Discover how many part there are (questa volta devo considerare il logaritmo di "size" perchè ogni nodo mi genererà
-	//"size" nodi figli)
-	n_cell_assigned = (int) ceil(logbase((double)size,(double) n_process * PART_PER_PROCESS));
-	int parts = (int) pow(size, n_cell_assigned);
-	int ppp_effective = parts / n_process;
-	if (rank < parts % n_process) ppp_effective++;
-	int i;
-	int return_code = 1;
-	int k = 0;
-	//printf("%d) PPP = %d\n", rank, ppp_effective);
-	//printf("%d) celle = %d\n", rank, n_cell_assigned);
-	int *mypart = (int *) malloc(sizeof(int)*(ppp_effective));
-	for (i = rank; i < parts; i = i + n_process){
-		mypart[k] = i;
-		k++;
-	}
-
 	//if(rank == 0) printf("%d) P Total = %d\n", rank, parts);
-
-	struct timeval t;
-	gettimeofday(&t, 0);
-
-	srand(t.tv_usec);
 
 	/*if(rank == 0){
 		for (k = 0; k < ppp_effective; k++) printf("%d ", mypart[k]);
 		printf("\n");
 	}*/
-	for (k = 0; k < ppp_effective; k++){
-		int j = 0;
-		copy_matrix(&global_matrix, &backup_matrix);
-		//Adesso rimane da codificare le possibile soluzioni, il numero 'i' verra codificato come
-		//valore casella 0 + valore casella 1 * size + ecc..
-		//Una rappresentazione in base size
-		//Prendo un indice in maniera psedo casuale
-		int index = rand() % ppp_effective;
-
-		int temp = mypart[index];
-
-		//printf("%d) k = %d, mypart[index] = %d\n", rank, k, mypart[index]);
-		for(j = 0; j < n_cell_assigned; j++){
-			int r = j / size;
-			int c = j % size;
-			backup_matrix[r][c].value = (temp % size) + 1;
-			temp = temp/ size;
-		}
-		//Elimino l'indice che sto considerando
-		ppp_effective--;
-		temp = mypart[index];
-		mypart[index] = mypart[ppp_effective];
-		mypart[ppp_effective] = temp;
-
-		//print_matrix(backup_matrix);
-
-		//Se il ciclo non si è concluso
-		if(j != n_cell_assigned)
-			continue;
-
-		return_code = solve_hitori(backup_matrix,0,unknown);
-		if(!return_code){
-				//printf("Solution found.\n");
-				i_terminated = 1;
-				fprintf(stderr,"Examinated %d node by process %d.\n", node_count, rank);
-				break;
-		}else if(return_code == -2) break;
-
-        }
+	int return_code = solve_hitori(backup_matrix,0,unknown);
+	if(!return_code){
+			//printf("Solution found.\n");
+			i_terminated = 1;
+			fprintf(stderr,"Examinated %d node by process %d.\n", node_count, rank);
+	}
 
 	if(rank){
 		int terminate = TERMINATE_NO_SUCC;
 		if ( return_code != -2 ){
-			//Se sono uscito dal ciclo perchè ho trocato una soluzione
-			if(k < ppp_effective) send_message(0, &color);
+			if(return_code == 0) send_message(0, &color);
 			//Se sono uscito dal ciclo perchè ho finito le mie parti
 			else  send_message(0, &terminate);
 			ring_waiting(next, prev, &color);
 			}
-        }else{
+    }else{
 		if ( return_code != -2 ){
-			//Se sono uscito dal ciclo perchè ho trocato una soluzione
-			if(k < ppp_effective) start_termination(next,prev);
-			//Se sono uscito dal ciclo perchè ho finito le mie parti
+			//ho trovato una soluzione
+			if(return_code == 0) start_termination(next,prev);
+			//ho finito le mie parti
 			else{
 				increasing_no_success_proc(rank);
 				check_for_termination_waiting(next,prev);
@@ -286,16 +231,17 @@ int solve_hitori(block** matrix,int i,int unknown){
 
 	int start_value = matrix[r][c].value;
 
-	for(int set_value = 1; set_value <= size; set_value++){
-		//char ver = 'y';
-		//Verifico che la matrice non mi sia stata già assegnata
-		if (i >= n_cell_assigned)
-			matrix[r][c].value = (start_value  + set_value) % size + 1;
-		/*else
-			printf("Non posso modificare %d (elemento %d) \n", matrix[r][c].value, c);*/
+	for(int set_value = 0; set_value < size;){
+		//Da dopo metà matrice in
+		if (r == size-1 && c == (int) 0) {
+			if (start_value == matrix[r][c].value) set_value += rank;
+			else set_value += n_process;
+			printf("set_value = %d \n", set_value);
+		}else{
+			set_value += 1;
+		}
 
-		/*while(ver != 'g')
-			scanf("%c\n", &ver);*/
+		matrix[r][c].value = (start_value  + set_value) % size + 1;
 
 		//tring to set current block to white
 		node_count++;
@@ -328,11 +274,10 @@ int solve_hitori(block** matrix,int i,int unknown){
 				free_matrix(backup_matrix);
 				return -2;
 			}
-        }
-
-	//Interrompo il ciclo non posso modificare il valore
-	if ( i < n_cell_assigned) break;
     }
+
+
+  }
 	//if (i == 0) print_matrix_result(matrix);
 	free_matrix(backup_matrix);
     return -1;
@@ -719,7 +664,7 @@ int send_message(int next, int* color){
     if(*color == TERMINATE_NO_SUCC){
         //Imposto il colore uguale al mio rank per far capire al processo 0 chi ha terminato
         status.color = rank;
-	//printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
+				printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
         if ( MPI_Send(&status, 1, message_datatype, next, 1, MPI_COMM_WORLD) == -1){
             printf("MPI_Send failed.\n");
             return -1;
@@ -730,7 +675,7 @@ int send_message(int next, int* color){
             printf("MPI_Send failed.\n");
             return -1;
         }
-	//printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
+				printf("Process %d send a message (%d) to %d\n", rank,status.color, next);
         if(status.color == TERMINATE) return TERMINATE;
     }
 
