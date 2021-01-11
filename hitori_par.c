@@ -62,6 +62,9 @@ int print_sub_matrix(block** my_elements,int my_size);
 int print_once(int prev,int next, block** mypartition);
 int check_row_and_column_par(block*** m, int unknown);
 int gatherUnknown(int* unknowns,int unknown);
+int gatherElements(block*** matrix, block*** my_elements);
+int gatherElementsCol(block*** matrix, block*** my_elements);
+int Bcast(int message);
 
 int main(int argc, char **argv){
     char* input_file;
@@ -151,10 +154,6 @@ int main(int argc, char **argv){
       }
     }else{
       int message = 1;
-      MPI_Status recv_status;
-
-      //Il numero di righe/colonne per ogni processo
-      int my_size = ((rank+1) * size)/n_process - (rank * size)/n_process;
 
       //Prima verrà utilizzato per delle righe e poi per delle colonne
       block** my_elements = calloc (size, sizeof(block*));
@@ -169,24 +168,30 @@ int main(int argc, char **argv){
 
         if( check_row_and_column(&my_elements, &unknown) ) unknown = 1;
 
+        gatherElements(&my_elements, &my_elements);
+
+        //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
+
         //printf("%d)Il mio unknown è %d \n", rank, unknown);
         scatterElementsColumn(&my_elements,&my_elements,my_size);
 
-        print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
+        //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
         if( check_row_and_column(&my_elements, &unknown) ) unknown = 1;
 
+        gatherElementsCol(&my_elements, &my_elements);
+
+        //printf("unknown = %d \n", unknown);
+
         gatherUnknown(NULL, unknown);
 
-        sleep(100);
-
-        if ( MPI_Recv(&message, 1, MPI_INT, 0, 0, MPI_COMM_WORLD, &recv_status) == -1){
-            printf("MPI_Recv failed.\n");
+        if ( MPI_Bcast(&message,1, MPI_INT,0,MPI_COMM_WORLD) == -1){
+            printf("MPI_Bcast failed.\n");
             MPI_Abort(MPI_COMM_WORLD, -1);
             return -1;
         }
 
-        printf("%d) message = %d. \n", rank, message);
+        //printf("%d) message = %d. \n", rank, message);
       }
 
       free_matrix(my_elements);
@@ -400,37 +405,61 @@ int check_row_and_column_par(block*** matrix,int unknown){
   scatterElements(matrix,&my_elements, my_size);
 
   if( check_row_and_column(&my_elements, &unknown) ) {
+    printf("%s\n", "Regole non rispettate");
     gatherUnknown(unknowns, unknown );
     free(unknowns);
     return -1;
   }
+
+  //print_matrix(*matrix);
+  //print_once(n_process-1, 1, my_elements);
+
+  gatherElements(matrix, &my_elements);
+
+  print_matrix(*matrix);
+
+  //print_once(n_process-1, 1, my_elements);
 
   scatterElementsColumn(matrix,&my_elements, my_size);
 
-  print_once(n_process-1, 1, my_elements);
+  //sleep(2);
+  //print_matrix(*matrix);
+  //print_once(n_process-1, 1, my_elements);
 
   if( check_row_and_column(&my_elements, &unknown) ) {
     //La gather serve per sbloccare gli altri processi dall'attesa
+    printf("%s\n", "Regole non rispettate");
     gatherUnknown(unknowns, unknown );
+    Bcast(1);
     free(unknowns);
     return -1;
   }
+
+  gatherElementsCol(matrix, &my_elements);
 
   gatherUnknown(unknowns, unknown );
 
   //Aggiorno il nuovo valore degli unknown
   //Poichè i numeri sono negativi equivale ad una sottrazione
   for(int i = 1; i < n_process; i++){
-    printf("%d) unknown = %d\n", i, unknown );
+    //printf("%d) unknown = %d\n", i, unknowns[i] );
     //1 vuol dire che le regole non sono rispettate
     if(unknowns[i] == 1) {
       free(unknowns);
+      Bcast(0);
       return -1;
     }
     unknown = unknown + unknowns[i];
   }
 
-  sleep(100);
+  Bcast(1);
+
+  //print_matrix(*matrix);
+
+  //printf("\n\n\n");
+  //printf("unknown = %d \n", unknown);
+
+  //sleep(2);
 
   free(unknowns);
   return unknown;
@@ -593,15 +622,38 @@ int scatterElements(block*** matrix, block*** my_elements,int my_size){
 }
 
 int scatterElementsColumn(block*** matrix, block*** my_elements,int my_size){
-  printf("%d) %d %d %d \n",rank, my_size,sendcountsCol[rank], displsCol[rank] );
-  MPI_Scatterv(**matrix, sendcountsCol, displsCol, ncol_type, **my_elements, my_size , ncol_type, 0, MPI_COMM_WORLD);
-  //printf("%s\n", "Dopo scatterCol");
+  //printf("%d) %d %d %d \n",rank, my_size,sendcountsCol[rank], displsCol[rank] );
+  MPI_Scatterv(**matrix, sendcountsCol, displsCol, ncol_type, **my_elements, size*my_size , block_datatype, 0, MPI_COMM_WORLD);
+  //printf("%d) %s\n", rank, "Dopo scatterCol");
   return 0;
 }
 
 int gatherUnknown(int* unknowns,int unknown){
   //printf("%d) %s\n", rank, "Prima gatherUnknown");
   return MPI_Gather(&unknown, 1, MPI_INT,unknowns, 1, MPI_INT, 0, MPI_COMM_WORLD);
+}
+
+int gatherElements(block*** matrix, block*** my_elements){
+  //printf("%d) %s\n", rank, "Prima gatherElements");
+  //printf("%d) %d %d %d \n",rank, my_size,sendcounts[rank], displs[rank] );
+  MPI_Gatherv(**my_elements, sendcounts[rank], block_datatype, **matrix, sendcounts, displs, block_datatype, 0, MPI_COMM_WORLD);
+  //printf("%s\n", "Dopo gather elements");
+  return 0;
+}
+
+int gatherElementsCol(block*** matrix, block*** my_elements){
+  printf("%d) %s\n", rank, "Prima gatherElementsCol");
+  MPI_Gatherv(**my_elements, sendcounts[rank], block_datatype, **matrix, sendcountsCol, displsCol , ncol_type, 0, MPI_COMM_WORLD);
+  return 0;
+}
+
+int Bcast(int message){
+  if ( MPI_Bcast(&message,1, MPI_INT,0,MPI_COMM_WORLD) == -1){
+      printf("MPI_Bcast failed.\n");
+      MPI_Abort(MPI_COMM_WORLD, -1);
+      return -1;
+  }
+  return 0;
 }
 
 int print_sub_matrix(block** matrix,int my_size){
