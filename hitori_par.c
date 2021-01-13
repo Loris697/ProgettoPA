@@ -8,10 +8,6 @@
 #include <ctype.h>
 #include <unistd.h>
 
-#define PART_PER_PROCESS 32
-#define TERMINATE 31000
-#define TERMINATE_NO_SUCC 31001
-
 typedef struct {
     short int value;
     char state;
@@ -77,6 +73,9 @@ void init_datatype();
 void halo_exchange(block **my_block);
 int gatherBlocks(block ***matrix, block ***my_block);
 int checkUnknown(int *unknowns, int* unknown);
+//SEQ FUNCTION
+int check_adjacent_rules_seq(block*** m, int unknown);
+int check_row_and_column_seq(block*** m, int unknown);
 
 int main(int argc, char **argv){
     char* input_file;
@@ -178,14 +177,23 @@ int main(int argc, char **argv){
             //printf("%d)Inizio verifica di regole righe/colonne.\n", rank);
             scatterElements(&my_elements, &my_elements,my_size);
 
-            if( check_row_and_column(&my_elements, &unknown) ) failed = 1;
+            if( check_row_and_column(&my_elements, &unknown) ){
+              printf("%d)Regole righe violate\n", rank);
+              failed = 1;
+            }
+
+            //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
             //Mando indietro i dati al processo zero
             gatherElements(&my_elements, &my_elements);
 
             scatterElementsColumn(&my_elements,&my_elements,my_size);
 
-            if( check_row_and_column(&my_elements, &unknown) ) failed = 1;
+            if( check_row_and_column(&my_elements, &unknown) ) {
+              printf("%d)Regole colonne violate\n", rank);
+              failed = 1;
+            }
+            //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
             gatherElementsCol(&my_elements, &my_elements);
 
@@ -207,6 +215,7 @@ int main(int argc, char **argv){
           halo_exchange(my_block);
 
           //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_block);
+          //sleep(10);
 
           if( check_adjacent_rules(&my_block,&unknown) ) unknown = 1;
           //printf("%d) unknown = %d\n", rank, unknown);
@@ -262,6 +271,8 @@ int solve_hitori(block** matrix,int i,int unknown){
         c = i % size;
     }
 
+    //printf(" i = %d \n", i);
+
     //printf("Now there are %d unkowns \n", unknown);
     //tring to set current block to white
     //printf("Setting %d element to white. \n", i+1);
@@ -308,7 +319,7 @@ int check_row_and_column(block*** m, int* u){
     //printf("%d) unknown = %d\n", rank, unknown);
     //printf("%d) displs[rank] = %d\n", rank, displs[rank]);
 
-    for(int i = displs[rank]; i < sendcounts[rank]; i++){
+    for(int i = 0; i < sendcounts[rank]; i++){
         //My current block's row and colum
         int r = i / size;
         int c = i % size;
@@ -338,49 +349,49 @@ int check_adjacent_rules(block*** m, int *u){
     block** matrix = *m;
     int unknown = *u;
 
+    //printf("%d)Dentro adj rules.\n", rank);
+
     for(int i = 0; i < my_n_col * my_n_row; i++){
             //My current block's row and colum
             int r = i / my_n_col;
             int c = i % my_n_col;
 
             //Nei bordi non devo fare niente
-            if(r == 0 || r == my_n_col - 1 || c == 0 || c == my_n_row - 1 ) continue;
+            if(r == 0 || r == my_n_row - 1 || c == 0 || c == my_n_col - 1 ) continue;
+
+            //if(rank == 1 ) printf("%d) %d, %d\n", rank, r, c);
+            //if(rank == 1 ) printf("%d) %hi, %c\n", rank, matrix[r][c].value, matrix[r][c].state);
 
             //if the state of the current block is black
-            if(matrix[r][c].state ==  'b'){
-                //For all the adjacent cell apply the second rule, but before I check that the cell exist
-                if (r > 0 ){
-                    if (matrix[r-1][c].state ==  'b')
-                        return 1;
-                    else if(matrix[r-1][c].state ==  'u'){
-                            matrix[r-1][c].state =  'w';
-                            unknown = unknown - 1;
-                        }
-                }if(c > 0){
-                    if (matrix[r][c-1].state ==  'b')
-                        return 1;
-                    else if(matrix[r][c-1].state ==  'u'){
-                            matrix[r][c-1].state =  'w';
-                            unknown = unknown - 1;
-                        }
-                }if(r + 1 < size){
-                    if (matrix[r+1][c].state ==  'b')
-                        return 1;
-                    else if(matrix[r+1][c].state ==  'u'){
-                        matrix[r+1][c].state =  'w';
-                        unknown = unknown - 1;
-                    }
-                }if(c + 1 < size){
-                        if (matrix[r][c+1].state ==  'b')
-                            return 1;
-                        else if(matrix[r][c+1].state ==  'u'){
-                            matrix[r][c+1].state =  'w';
-                            unknown = unknown - 1;
-                        }
+            //For all the adjacent cell apply the second rule, but before I check that the cell exist
+            if (r > 0 ){
+                if (matrix[r-1][c].state ==  'b' && matrix[r][c].state ==  'b') return 1;
+                else if(matrix[r-1][c].state ==  'b' && matrix[r][c].state ==  'u'){
+                    matrix[r][c].state =  'w';
+                    unknown = unknown - 1;
                 }
-
-            }
+            }if(c > 0){
+                if (matrix[r][c-1].state ==  'b' && matrix[r][c].state ==  'b' ) return 1;
+                else if(matrix[r][c-1].state ==  'b' && matrix[r][c].state ==  'u'){
+                    matrix[r][c].state =  'w';
+                    unknown = unknown - 1;
+                }
+            }if(r + 1 < my_n_row){
+                if (matrix[r+1][c].state ==  'b' && matrix[r][c].state ==  'b' ) return 1;
+                else if(matrix[r+1][c].state ==  'b' && matrix[r][c].state ==  'u'){
+                    matrix[r][c].state =  'w';
+                    unknown = unknown - 1;
+                }
+            }if(c + 1 < my_n_row){
+                if (matrix[r][c+1].state ==  'b' && matrix[r][c].state ==  'b') return 1;
+                else if(matrix[r][c+1].state ==  'b' && matrix[r][c].state ==  'u'){
+                    matrix[r][c].state =  'w';
+                    unknown = unknown - 1;
+                }
+          }
     }
+    //printf("%d)Fuori adj rules.\n", rank);
+
     *u = unknown;
     return 0;
 }
@@ -418,10 +429,10 @@ int check_neighborhood(int row,int col,block** matrix, int** flag_vector){
 }
 
 int check_row_and_column_par(block*** matrix,int unknown){
+  if( n_process == 1 ) return check_row_and_column_seq(matrix,unknown);
   int* unknowns = (int *) malloc(n_process*sizeof(int));
   block** my_elements = calloc (size, sizeof(block*));
   my_elements[0] = calloc (size * my_size, sizeof(block));
-  int r, c;
 
   for (int i = 1; i < my_size; i++) my_elements[i] = my_elements[i-1] + size;
 
@@ -434,8 +445,15 @@ int check_row_and_column_par(block*** matrix,int unknown){
     printf("%s\n", "Regole non rispettate");
     unknown = -1;
   }
+  //print_once(n_process-1, 1, my_elements);
 
   gatherElements(matrix, &my_elements);
+
+  //printf("Righe\n");
+  //print_matrix(*matrix);
+  //printf("\n\n");
+  //sleep(5);
+
   scatterElementsColumn(matrix,&my_elements, my_size);
 
   if( check_row_and_column(&my_elements, &unknown) ) {
@@ -445,42 +463,59 @@ int check_row_and_column_par(block*** matrix,int unknown){
   }
 
   //print_once(n_process-1, 1, my_elements);
+
+  //print_once(n_process-1, 1, my_elements);
   //print_matrix(*matrix);
   //printf("\n\n\n");
 
   gatherElementsCol(matrix, &my_elements);
+
+  /*printf("Colonne\n");
+  print_matrix_result(*matrix);
+  printf("\n\n");
+  sleep(1);*/
 
   gatherUnknown(unknowns, unknown );
 
   //print_once(n_process-1, 1, my_elements);
 
   free(my_elements);
-
-  for(int i = 0; i < size * size; i++){
-    r = i / size;
-    c = i % size;
-    if (((*matrix)[r][c]).state == 'w') break;
-  }
-
-  if(find_connection_of_white(r, c, *matrix)) return -1;
-  return checkUnknown(unknowns, &unknown);;
+  return checkUnknown(unknowns, &unknown);
 }
 
 int check_adjacent_rules_par(block*** matrix,int unknown ){
+  if( n_process == 1 ) return check_adjacent_rules_seq(matrix,unknown);
   block** my_block;
   int* unknowns = (int *) malloc(n_process*sizeof(int));
+  int r, c;
 
   init_input_data(matrix, &my_block, &my_n_col, &my_n_row);
 
   halo_exchange(my_block);
 
   //print_once(n_process-1, 1, my_block);
+  //sleep(10);
 
-  //print_matrix(*matrix);
+  if( check_adjacent_rules(&my_block,&unknown) ){
+    printf("%s\n", "Regole non rispettate");
+    unknown = -1;
+  }
 
-  check_adjacent_rules(matrix,&unknown);
+  //copio nel nuovo vettore i dati
+  for (int i = 1; i < my_n_row - 1; i++) {
+      memcpy((*matrix)[i-1], &my_block[i][1], (my_n_col - 2)*sizeof(block));
+      //print_sub_block(*my_block);
+  }
+
+  //print_matrix_result(*matrix);
+  //printf("\n\n");
 
   gatherBlocks(matrix, &my_block);
+
+  gatherUnknown(unknowns, unknown );
+
+  //print_matrix_result(*matrix);
+  //sleep(100);
 
   //print_matrix(*matrix);
 
@@ -489,23 +524,44 @@ int check_adjacent_rules_par(block*** matrix,int unknown ){
   //print_once(n_process-1, 1, my_block);
 
   free(my_block);
-  return checkUnknown(unknowns, &unknown);;
+  for(int i = 0; i < size * size; i++){
+    r = i / size;
+    c = i % size;
+    if (((*matrix)[r][c]).state == 'w') break;
+  }
+
+  if(find_connection_of_white(r, c, *matrix)) return -1;
+  return checkUnknown(unknowns, &unknown);
 }
 
 int apply_rule(block*** matrix,int unknown){
     int prev_u;
     do{
         prev_u = unknown;
+        //int unknown_real = 0;
         Bcast(0);
         //printf("%d)Inizio( verifica di regole righe/colonne.\n", rank);
         unknown = check_row_and_column_par(matrix, unknown);
+        /*for(int i = 0; i < size* size; i ++) if((*matrix)[(int) i/size][i%size].state == 'u') unknown_real++;
+        if(unknown_real != unknown){
+          printf("(real) %d != %d --row/column\n", unknown_real, unknown);
+          print_matrix(*matrix);
+          sleep(100);
+        }else printf("(real) %d == %d --row/column\n", unknown_real, unknown);
+        if(unknown == 381 ) print_matrix(*matrix);*/
         //printf("%d)Finisco verifica di regole righe/colonne.\n", rank);
         if (unknown < 0) return -1;
         Bcast(1);
         //printf("%d)Inizio verifica di regole adiacenza.\n", rank);
 		    unknown = check_adjacent_rules_par(matrix,unknown);
         //printf("%d)Finisco verifica di regole adiacenza.\n", rank);
-        print_matrix(*matrix);
+        /*unknown_real = 0;
+        for(int i = 0; i < size* size; i ++) if((*matrix)[(int) i/size][i%size].state == 'u') unknown_real++;
+        if(unknown_real != unknown){
+          printf("(real) %d != %d --adjacent\n", unknown_real, unknown);
+          print_matrix(*matrix);
+          sleep(100);
+        }else printf("(real) %d == %d --adjacent\n", unknown_real, unknown);*/
         //sleep(1);
         if (unknown < 0) return -1;
     }while(prev_u != unknown);
@@ -614,17 +670,18 @@ int print_matrix(block** matrix){
 
 int print_sub_matrix(block** matrix, int my_size){
     //printf("The matrix is: \n");
-    for(int i = 0; i < size; i++) {
-        for(int j = 0; j < my_size; j++) {
+    for(int i = 0; i < my_size; i++) {
+        for(int j = 0; j < size; j++) {
             if(matrix[i][j].state == 'w')
-                printf("%d\t", matrix[i][j].value);
+                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
             else if(matrix[i][j].state == 'b')
-                printf("x\t");
+                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
             else
                 printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
         }
     printf("\n");
     }
+    printf("\n");
     return 1;
 }
 
@@ -703,7 +760,7 @@ void init_datatype(){
   }
   MPI_Type_commit(&block_datatype);
 
-  printf("%d) my_col = %d, my_row = %d \n", rank, my_n_col, my_n_row);
+  //printf("%d) my_col = %d, my_row = %d \n", rank, my_n_col, my_n_row);
 
   //'Single_Col' Data Type
   MPI_Type_vector(size, 1, size, block_datatype, &col_datatype);
@@ -761,8 +818,13 @@ int scatterElementsColumn(block*** matrix, block*** my_elements,int my_size){
 }
 
 int gatherUnknown(int* unknowns,int unknown){
-  //printf("%d) %s\n", rank, "Prima gatherUnknown");
-  return MPI_Gather(&unknown, 1, MPI_INT,unknowns, 1, MPI_INT, 0, MPI_COMM_WORLD);
+  //printf("%d) %s (%d)\n", rank, "Prima gatherUnknown", unknown);
+  MPI_Gather(&unknown, 1, MPI_INT,unknowns, 1, MPI_INT, 0, MPI_COMM_WORLD);
+  /*if(!rank){
+    for(int i = 0; i < n_process; i++) printf("%d ", unknowns[i]);
+    printf("\n");
+  }*/
+  return 0;
 }
 
 int gatherElements(block*** matrix, block*** my_elements){
@@ -812,14 +874,14 @@ int gatherBlocks(block*** matrix, block*** my_block){
         num_row = ((rank_y + 1) * (size))/radp - start_row;
         num_col = ((rank_x + 1) * (size))/radp - start_col;
 
-        //printf("%d) start r = %d, start c = %d, num_row = %d, num_col = %d \n", i, start_row, start_col, num_row, num_col);
+        //printf("%d) start r = %d, start c = %d, num_row = %d, num_col = %d (%d)\n", i, start_row, start_col, num_row, num_col, (num_row + 2) == *nrow);
         //printf("%d\n", ((*matrix)[start_row] + start_col)->value);
 
         //printf("Invio i miei dati a %d. \n", i);
-        if (num_col == (*ncol))
-          MPI_Recv((*matrix)[start_row] + start_col, num_row, block_n_element_col, i, 0, MPI_COMM_WORLD, &st);
+        if ((num_row) + 2 == *nrow)
+          MPI_Recv((*matrix)[start_row] + start_col, num_col, block_n_element_col, i, 0, MPI_COMM_WORLD, &st);
         else
-          MPI_Recv((*matrix)[start_row] + start_col, num_row, block_n1_element_col, i, 0, MPI_COMM_WORLD, &st);
+          MPI_Recv((*matrix)[start_row] + start_col, num_col, block_n1_element_col, i, 0, MPI_COMM_WORLD, &st);
         //printf("Dati inviati a %d. \n", i);
 
         //  tmp += num_row;
@@ -827,7 +889,7 @@ int gatherBlocks(block*** matrix, block*** my_block){
   }
   else{
       //printf("%d)Ricevo i dati. \n", rank);
-      MPI_Send(&((*my_block)[1][1]), (*nrow-2), block_n_element_col_r, 0, 0, MPI_COMM_WORLD);
+      MPI_Send(&((*my_block)[1][1]), (*ncol)-2, block_n_element_col_r, 0, 0, MPI_COMM_WORLD);
       //printf("%d)Ho ricevuto %d\n", rank,(&((*my_block)[1][1]))->value);
       //printf("%d)Dati ricevuti. \n", rank);
   }
@@ -852,12 +914,13 @@ int print_once(int prev,int next, block** mypartition){
 			printf("MPI_Recv failed.\n");
 			return -1;
 		}
-		//print_sub_matrix(mypartition, sendcounts[rank]/size);
-    print_sub_block(mypartition);
+		print_sub_matrix(mypartition, sendcounts[rank]/size);
+    //print_sub_block(mypartition);
     fflush(stdin);
     sleep(1);
 	}else if(rank == 0){
-		print_sub_block(mypartition);
+    print_sub_matrix(mypartition, sendcounts[rank]/size);
+		//print_sub_block(mypartition);
     fflush(stdin);
     sleep(1);
 		stampare = 1;
@@ -872,8 +935,8 @@ int print_once(int prev,int next, block** mypartition){
 			return -1;
 		}
 
-		//print_sub_matrix(mypartition, sendcounts[rank]/size);
-    print_sub_block(mypartition);
+		print_sub_matrix(mypartition, sendcounts[rank]/size);
+    //print_sub_block(mypartition);
     fflush(stdin);
     sleep(1);
 
@@ -996,16 +1059,97 @@ void halo_exchange(block **my_block)
 int checkUnknown(int* unknowns, int* unknown){
   //Aggiorno il nuovo valore degli unknown
   //Poichè i numeri sono negativi equivale ad una sottrazione
+  //printf("%d) unknown = %d\n", 0, unknowns[0] );
   for(int i = 1; i < n_process; i++){
     //printf("%d) unknown = %d\n", i, unknowns[i] );
     //1 vuol dire che le regole non sono rispettate
     if(unknowns[i] == 1) {
       free(unknowns);
+      printf("Returning -1\n");
       return -1;
     }
     *unknown = *unknown + unknowns[i];
   }
-  //printf("%d) unknown = %d\n", rank, *unknown );
+  //printf("%d) unknown = %d\n", rank, *unknown);
+  //sleep(1);
   free(unknowns);
   return *unknown;
+}
+
+/******************************************************************************
+                          SEQ FUNCTION
+********************************************************************************/
+int check_row_and_column_seq(block*** m, int unknown){
+	block** matrix = *m;
+
+	for(int i = 0; i < size * size; i++){
+		//My current block's row and colum
+		int r = i / size;
+		int c = i % size;
+
+		//if the current block's state is unknown i can't do anything
+		if(matrix[r][c].state != 'u'){
+			for(int rnew = 0; rnew < size; rnew++ )
+				//I have to not check the block with itself
+				//It's varing 'r' so i'm verifing the column rule
+				if(rnew != r){
+					if(matrix[r][c].value == matrix[rnew][c].value){
+						//If the number is the same
+						//The same white state means wrong solution
+						if(matrix[r][c].state == 'w' && matrix[rnew][c].state == 'w'){
+							return -1;
+					}
+					}
+				}
+
+			//Let's do the same thing with for the rows
+			for(int cnew = 0; cnew < size; cnew++ ){
+				if(cnew != c)
+					if(matrix[r][c].value == matrix[r][cnew].value){
+						if(matrix[r][c].state == 'w' && matrix[r][cnew].state == 'w'){
+							return -1;
+						}
+				}
+
+			}
+		}
+	}
+	return unknown;
+}
+
+int check_adjacent_rules_seq(block*** m, int unknown){
+	//Find if there are two black cell adjacent
+	block** matrix = *m;
+	int first_white = 1;
+
+	for(int i = 0; i < size * size; i++){
+			//My current block's row and colum
+			int r = i / size;
+			int c = i % size;
+
+			//if the state of the current block is black
+			if(matrix[r][c].state ==  'b'){
+				//For all the adjacent cell apply the second rule, but before I check that the cell exist
+				if (r > 0 ){
+					if (matrix[r-1][c].state ==  'b')
+						return -1;
+				}if(c > 0){
+					if (matrix[r][c-1].state ==  'b')
+						return -1;
+				}if(r + 1 < size){
+					if (matrix[r+1][c].state ==  'b')
+						return -1;
+				}if(c + 1 < size){
+                    if (matrix[r][c+1].state ==  'b')
+                        return -1;
+				}
+
+			}else if (first_white) {
+				first_white--;
+				if(find_connection_of_white(r, c, matrix))
+					return -1;
+			}
+	}
+
+	return unknown;
 }
