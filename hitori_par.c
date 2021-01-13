@@ -106,6 +106,10 @@ int main(int argc, char **argv){
     }
 
     int radp = sqrt(n_process);
+    if (!rank && (float) radp != sqrt(n_process)){
+      printf("Il numero di processi deve essere un quadrato perfetto.\n");
+      MPI_Abort(MPI_COMM_WORLD, -1);
+    }
     int rank_y = rank / radp;
     int rank_x = rank % radp;
     my_size = ((rank+1) * size)/n_process - (rank * size)/n_process;
