@@ -35,8 +35,6 @@ int* sendcounts;
 int* displs;
 int* sendcountsCol;
 int* displsCol;
-int* sendcountsBlock;
-int* displsBlock;
 int my_size, my_n_col, my_n_row;
 
 
@@ -56,18 +54,15 @@ int copy_matrix(block*** input_matrix, block*** output_matrix);
 int apply_rule(block*** matrix, int unknown);
 double logbase(int base, int x);
 int isNumber(char number[]);
+int check_input(char** input_file, int argc, char** argv);
 //PARALLEL FUNCTION
 int scatterElements(block*** matrix, block*** my_elements,int my_size);
 int scatterElementsColumn(block*** matrix, block*** my_elements,int my_size);
-int print_sub_matrix(block** my_elements,int my_size);
-int print_sub_block(block** mypartition);
-int print_once(int prev,int next, block** mypartition);
 int check_row_and_column_par(block*** m, int unknown);
 int gatherUnknown(int* unknowns,int unknown);
 int gatherElements(block*** matrix, block*** my_elements);
 int gatherElementsCol(block*** matrix, block*** my_elements);
 int Bcast(int message);
-void print_sub_blocktype();
 void init_input_data();
 void init_datatype();
 void halo_exchange(block **my_block);
@@ -78,40 +73,23 @@ int check_adjacent_rules_seq(block*** m, int unknown);
 int check_row_and_column_seq(block*** m, int unknown);
 
 int main(int argc, char **argv){
-    char* input_file;
-
     //Initialization of the MPI data structures
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &n_process);
 
-    //Controllo sull'input
-    if(argc<3 || argc>3){
-        printf("\nThe program needs two arguments: \n1)The file containing the puzzle\n2) The dimension o f the puzzle");
-        return -1;
-    }
-    if( isNumber(argv[2]) ) size = atoi(argv[2]);
-    else{
-      printf("Il secondo argomento deve essere un intero.\n");
-      return -1;
-    }
-
-    input_file = argv[1];
-
-    if(!strcmp(input_file ,"stdin"))
-      	read_matrix_from_stdin(&global_matrix);
-    else if( read_matrix_from_file(&global_matrix,input_file) == -1) {
-      	MPI_Finalize();
-        return -1;
-    }
-
     int radp = sqrt(n_process);
-    if (!rank && (float) radp != sqrt(n_process)){
-      printf("Il numero di processi deve essere un quadrato perfetto.\n");
-      MPI_Abort(MPI_COMM_WORLD, -1);
-    }
     int rank_y = rank / radp;
     int rank_x = rank % radp;
+    //Solo per rimuovere il warning
+    char* input_file = NULL;
+
+    //Controllo sull'input
+    if ( check_input(&input_file, argc, argv) == -1) {
+      MPI_Finalize();
+      return 0;
+    }
+
     my_size = ((rank+1) * size)/n_process - (rank * size)/n_process;
     my_n_col = ((rank_x+1) * size)/radp - (rank_x * size)/radp + 2;
     my_n_row = ((rank_y+1) * size)/radp - (rank_y * size)/radp + 2;
@@ -123,28 +101,20 @@ int main(int argc, char **argv){
     //Stessa cosa ma per le colonne
     sendcountsCol = (int *) malloc(n_process*sizeof(int));
     displsCol = (int *) malloc(n_process*sizeof(int));
-    //Stessa cosa ma per le colonne
-    sendcountsBlock = (int *) malloc(n_process*sizeof(int));
-    displsBlock = (int *) malloc(n_process*sizeof(int));
     for(int i = 0; i < n_process; i++){
       sendcounts[i] = (((i+1) * size)/n_process - (i * size)/n_process)*size;
       sendcountsCol[i] = (((i+1) * size)/n_process - (i * size)/n_process);
-      sendcountsBlock[i] = (((i+1) * size)/n_process - (i * size)/n_process);
-      //if(!rank) printf(" sendcounts[%d] = %d \n",i , sendcounts[i]);
       displs[i] =( i * size)/n_process * size;
       displsCol[i] =( i * size)/n_process;
-      //if(!rank) printf(" displs[%d] = %d \n",i , displs[i]);
     }
 
     init_datatype();
 
-    //if (!rank) printf("Solving\n");
 		//Per misurare il tempo
 		MPI_Barrier(MPI_COMM_WORLD);
 		double time = - MPI_Wtime();
 
     if(rank == 0){
-      //print_matrix(backup_matrix);
       if(!solve_hitori(global_matrix,0,unknown)){
           printf("Solution found.\n");
           print_matrix(global_matrix);
@@ -175,18 +145,13 @@ int main(int argc, char **argv){
         }
 
         if( message == 0 ){
-            //
             //Per la verifica della regola su righe e colonne
-            //
-            //printf("%d)Inizio verifica di regole righe/colonne.\n", rank);
             scatterElements(&my_elements, &my_elements,my_size);
 
             if( check_row_and_column(&my_elements, &unknown) ){
               printf("%d)Regole righe violate\n", rank);
               failed = 1;
             }
-
-            //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
             //Mando indietro i dati al processo zero
             gatherElements(&my_elements, &my_elements);
@@ -197,46 +162,31 @@ int main(int argc, char **argv){
               printf("%d)Regole colonne violate\n", rank);
               failed = 1;
             }
-            //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
             gatherElementsCol(&my_elements, &my_elements);
-
-            //printf("%d)Il mio unknown è %d \n", rank, unknown);
-            //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_elements);
 
             //Invio il valore degli unknown restanti al processo zero
             if (failed) gatherUnknown(NULL, 1);
             else gatherUnknown(NULL, unknown);
-            //printf("%d)Finisco verifica di regole righe/colonne.\n", rank);
         }else if ( message == 1 ) {
-          //
           //Per la verifica delle regole di adiacenza
-          //
-          //printf("%d)Inizio verifica di adiacenza.\n", rank);
           block** my_block;
           init_input_data(NULL, &my_block, &my_n_row, &my_n_col);
 
           halo_exchange(my_block);
 
-          //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_block);
-          //sleep(10);
-
           if( check_adjacent_rules(&my_block,&unknown) ) unknown = 1;
-          //printf("%d) unknown = %d\n", rank, unknown);
 
           gatherBlocks( NULL, &my_block);
           free(my_block);
 
           gatherUnknown(NULL, unknown);
-          //printf("%d)Finisco verifica di adiacenza.\n", rank);
-          //print_once((rank + n_process - 1)%n_process, (rank + 1)%n_process, my_block);
         }
         else break;
       }
       free_matrix(my_elements);
     }
 
-    //printf("%d) Terminate.\n", rank);
     fflush(stdout);
     MPI_Barrier(MPI_COMM_WORLD);
     time += MPI_Wtime();
@@ -275,11 +225,6 @@ int solve_hitori(block** matrix,int i,int unknown){
         c = i % size;
     }
 
-    //printf(" i = %d \n", i);
-
-    //printf("Now there are %d unkowns \n", unknown);
-    //tring to set current block to white
-    //printf("Setting %d element to white. \n", i+1);
     node_count++;
     matrix[r][c].state = 'w';
     //Make a safe copy
@@ -291,14 +236,10 @@ int solve_hitori(block** matrix,int i,int unknown){
     //If the function apply rule return -1 means that it failed
     unknown = apply_rule(&backup_matrix, unknown);
     if( unknown != -1){
-      //printf("Applied succesfully rules. \n");
   		int return_code = solve_hitori(backup_matrix, i + 1, unknown);
   		if( return_code == 0) return 0;
     }
 
-    //failed white trying black
-    //printf("Failed apply to rules. \n");
-    //printf("Setting %d element to black. \n", i+1);
     node_count++;
     matrix[r][c].state = 'b';
     unknown = unknown_copy;
@@ -308,7 +249,6 @@ int solve_hitori(block** matrix,int i,int unknown){
 
     unknown = apply_rule(&matrix, unknown);
 	if( unknown != -1){
-    //printf("Applied succesfully rules. \n");
 		int return_code = solve_hitori(matrix, i + 1, unknown);
 		if( return_code == 0) return 0;
   }
@@ -319,9 +259,6 @@ int solve_hitori(block** matrix,int i,int unknown){
 int check_row_and_column(block*** m, int* u){
     block** matrix = *m;
     int unknown = *u;
-
-    //printf("%d) unknown = %d\n", rank, unknown);
-    //printf("%d) displs[rank] = %d\n", rank, displs[rank]);
 
     for(int i = 0; i < sendcounts[rank]; i++){
         //My current block's row and colum
@@ -353,8 +290,6 @@ int check_adjacent_rules(block*** m, int *u){
     block** matrix = *m;
     int unknown = *u;
 
-    //printf("%d)Dentro adj rules.\n", rank);
-
     for(int i = 0; i < my_n_col * my_n_row; i++){
             //My current block's row and colum
             int r = i / my_n_col;
@@ -363,11 +298,6 @@ int check_adjacent_rules(block*** m, int *u){
             //Nei bordi non devo fare niente
             if(r == 0 || r == my_n_row - 1 || c == 0 || c == my_n_col - 1 ) continue;
 
-            //if(rank == 1 ) printf("%d) %d, %d\n", rank, r, c);
-            //if(rank == 1 ) printf("%d) %hi, %c\n", rank, matrix[r][c].value, matrix[r][c].state);
-
-            //if the state of the current block is black
-            //For all the adjacent cell apply the second rule, but before I check that the cell exist
             if (r > 0 ){
                 if (matrix[r-1][c].state ==  'b' && matrix[r][c].state ==  'b') return 1;
                 else if(matrix[r-1][c].state ==  'b' && matrix[r][c].state ==  'u'){
@@ -394,7 +324,6 @@ int check_adjacent_rules(block*** m, int *u){
                 }
           }
     }
-    //printf("%d)Fuori adj rules.\n", rank);
 
     *u = unknown;
     return 0;
@@ -440,23 +369,14 @@ int check_row_and_column_par(block*** matrix,int unknown){
 
   for (int i = 1; i < my_size; i++) my_elements[i] = my_elements[i-1] + size;
 
-  //printf("Avvio scatter. \n");
-  //print_matrix(*matrix);
-  //Invio le righe e le colonne
   scatterElements(matrix,&my_elements, my_size);
 
   if( check_row_and_column(&my_elements, &unknown) ) {
     printf("%s\n", "Regole non rispettate");
     unknown = -1;
   }
-  //print_once(n_process-1, 1, my_elements);
 
   gatherElements(matrix, &my_elements);
-
-  //printf("Righe\n");
-  //print_matrix(*matrix);
-  //printf("\n\n");
-  //sleep(5);
 
   scatterElementsColumn(matrix,&my_elements, my_size);
 
@@ -466,22 +386,9 @@ int check_row_and_column_par(block*** matrix,int unknown){
       unknown = -1;
   }
 
-  //print_once(n_process-1, 1, my_elements);
-
-  //print_once(n_process-1, 1, my_elements);
-  //print_matrix(*matrix);
-  //printf("\n\n\n");
-
   gatherElementsCol(matrix, &my_elements);
 
-  /*printf("Colonne\n");
-  print_matrix_result(*matrix);
-  printf("\n\n");
-  sleep(1);*/
-
   gatherUnknown(unknowns, unknown );
-
-  //print_once(n_process-1, 1, my_elements);
 
   free(my_elements);
   return checkUnknown(unknowns, &unknown);
@@ -497,9 +404,6 @@ int check_adjacent_rules_par(block*** matrix,int unknown ){
 
   halo_exchange(my_block);
 
-  //print_once(n_process-1, 1, my_block);
-  //sleep(10);
-
   if( check_adjacent_rules(&my_block,&unknown) ){
     printf("%s\n", "Regole non rispettate");
     unknown = -1;
@@ -508,24 +412,11 @@ int check_adjacent_rules_par(block*** matrix,int unknown ){
   //copio nel nuovo vettore i dati
   for (int i = 1; i < my_n_row - 1; i++) {
       memcpy((*matrix)[i-1], &my_block[i][1], (my_n_col - 2)*sizeof(block));
-      //print_sub_block(*my_block);
   }
-
-  //print_matrix_result(*matrix);
-  //printf("\n\n");
 
   gatherBlocks(matrix, &my_block);
 
   gatherUnknown(unknowns, unknown );
-
-  //print_matrix_result(*matrix);
-  //sleep(100);
-
-  //print_matrix(*matrix);
-
-  //printf("\n ----------------------------------------------------------------\n");
-
-  //print_once(n_process-1, 1, my_block);
 
   free(my_block);
   for(int i = 0; i < size * size; i++){
@@ -546,27 +437,10 @@ int apply_rule(block*** matrix,int unknown){
         Bcast(0);
         //printf("%d)Inizio( verifica di regole righe/colonne.\n", rank);
         unknown = check_row_and_column_par(matrix, unknown);
-        /*for(int i = 0; i < size* size; i ++) if((*matrix)[(int) i/size][i%size].state == 'u') unknown_real++;
-        if(unknown_real != unknown){
-          printf("(real) %d != %d --row/column\n", unknown_real, unknown);
-          print_matrix(*matrix);
-          sleep(100);
-        }else printf("(real) %d == %d --row/column\n", unknown_real, unknown);
-        if(unknown == 381 ) print_matrix(*matrix);*/
-        //printf("%d)Finisco verifica di regole righe/colonne.\n", rank);
         if (unknown < 0) return -1;
         Bcast(1);
         //printf("%d)Inizio verifica di regole adiacenza.\n", rank);
 		    unknown = check_adjacent_rules_par(matrix,unknown);
-        //printf("%d)Finisco verifica di regole adiacenza.\n", rank);
-        /*unknown_real = 0;
-        for(int i = 0; i < size* size; i ++) if((*matrix)[(int) i/size][i%size].state == 'u') unknown_real++;
-        if(unknown_real != unknown){
-          printf("(real) %d != %d --adjacent\n", unknown_real, unknown);
-          print_matrix(*matrix);
-          sleep(100);
-        }else printf("(real) %d == %d --adjacent\n", unknown_real, unknown);*/
-        //sleep(1);
         if (unknown < 0) return -1;
     }while(prev_u != unknown);
     //the do while cycle continue until appling the rules makes no change
@@ -672,40 +546,6 @@ int print_matrix(block** matrix){
     return 1;
 }
 
-int print_sub_matrix(block** matrix, int my_size){
-    //printf("The matrix is: \n");
-    for(int i = 0; i < my_size; i++) {
-        for(int j = 0; j < size; j++) {
-            if(matrix[i][j].state == 'w')
-                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
-            else if(matrix[i][j].state == 'b')
-                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
-            else
-                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
-        }
-    printf("\n");
-    }
-    printf("\n");
-    return 1;
-}
-
-int print_sub_block(block** matrix){
-    //printf("The matrix is: \n");
-    for(int i = 0; i < my_n_row; i++) {
-        for(int j = 0; j < my_n_col; j++) {
-            if(matrix[i][j].state == 'w')
-                printf("%d\t", matrix[i][j].value);
-            else if(matrix[i][j].state == 'b')
-                printf("x\t");
-            else
-                printf("%d,%c\t", matrix[i][j].value, matrix[i][j].state);
-        }
-    printf("\n");
-    }
-    printf("\n");
-    return 1;
-}
-
 int print_matrix_result(block** matrix){
     for(int i = 0; i < size; i++) {
         for(int j = 0; j < size; j++) {
@@ -741,11 +581,6 @@ int isNumber(char number[])
                                 PARALLEL FUNCTIONS
 *******************************************************************************/
 void init_datatype(){
-  int rank_x;
-	int n;
-	int radp;
-  int dim;
-
   //Making the block datatype
   MPI_Aint displ[2];
   int bl[2] = {1, 1};
@@ -759,42 +594,32 @@ void init_datatype(){
   displ[1] -= displ[0];
   displ[0] = 0;
 
+  //Questo tipo di dato serve per mandare un singolo blocco
   if (MPI_Type_create_struct(2, bl, displ, dt, &block_datatype) == -1){
       printf("Creation of the datatype failed.\n");
   }
   MPI_Type_commit(&block_datatype);
 
-  //printf("%d) my_col = %d, my_row = %d \n", rank, my_n_col, my_n_row);
-
-  //'Single_Col' Data Type
+  //Questo tipo di dato permette di mandare solo una colonna alla volta
+  //Serve solo per costruire il tipo ncol_type
   MPI_Type_vector(size, 1, size, block_datatype, &col_datatype);
   MPI_Type_commit(&col_datatype);
 
-  //'Single_Col' Data Type send
+  //Stesso ragionamento di prima ma questi du servono per lo scambio degli halo e dei blocchi
   MPI_Type_vector(my_n_row-2, 1, size, block_datatype, &col_datatype_block);
   MPI_Type_commit(&col_datatype_block);
 
-  //'Single_Col' Data Type send
   MPI_Type_vector(my_n_row-1, 1, size, block_datatype, &col_datatype_block1);
   MPI_Type_commit(&col_datatype_block1);
 
-  //'Single_Col' Data Type recv
+  //Questo servirà per la ricezione invece
   MPI_Type_vector(my_n_row-2, 1, my_n_col, block_datatype, &col_datatype_block_r);
   MPI_Type_commit(&col_datatype_block_r);
 
 
-  //Ncol datatype
+  //Per lo scambio efffettivo delle colonne
   MPI_Type_create_resized(col_datatype, 0 , (MPI_Aint) sizeof(block),  &ncol_type);
   MPI_Type_commit(&ncol_type);
-
- radp = sqrt(n_process);
- rank_x = rank % radp;
-
-	n = ((rank_x + 1)*(size-2))/ radp - (rank_x*(size-2))/ radp;
-	if (rank != 0)
-		dim = n + 2;
-	else
-		dim = size;
 
 	MPI_Type_create_resized(col_datatype_block, 0 , (MPI_Aint) sizeof(block),  &block_n_element_col);
   MPI_Type_create_resized(col_datatype_block1, 0 , (MPI_Aint) sizeof(block),  &block_n1_element_col);
@@ -805,42 +630,27 @@ void init_datatype(){
   MPI_Type_commit(&block_n_element_col_r);
 }
 
-
-
 int scatterElements(block*** matrix, block*** my_elements,int my_size){
-  //printf("%d) %d %d %d \n",rank, my_size,sendcounts[rank], displs[rank] );
   MPI_Scatterv(**matrix, sendcounts, displs, block_datatype, **my_elements, size*my_size,block_datatype, 0, MPI_COMM_WORLD);
-  //printf("%s\n", "Dopo scatter");
   return 0;
 }
 
 int scatterElementsColumn(block*** matrix, block*** my_elements,int my_size){
-  //printf("%d) %d %d %d \n",rank, my_size,sendcountsCol[rank], displsCol[rank] );
   MPI_Scatterv(**matrix, sendcountsCol, displsCol, ncol_type, **my_elements, size*my_size , block_datatype, 0, MPI_COMM_WORLD);
-  //printf("%d) %s\n", rank, "Dopo scatterCol");
   return 0;
 }
 
 int gatherUnknown(int* unknowns,int unknown){
-  //printf("%d) %s (%d)\n", rank, "Prima gatherUnknown", unknown);
   MPI_Gather(&unknown, 1, MPI_INT,unknowns, 1, MPI_INT, 0, MPI_COMM_WORLD);
-  /*if(!rank){
-    for(int i = 0; i < n_process; i++) printf("%d ", unknowns[i]);
-    printf("\n");
-  }*/
   return 0;
 }
 
 int gatherElements(block*** matrix, block*** my_elements){
-  //printf("%d) %s\n", rank, "Prima gatherElements");
-  //printf("%d) %d %d %d \n",rank, my_size,sendcounts[rank], displs[rank] );
   MPI_Gatherv(**my_elements, sendcounts[rank], block_datatype, **matrix, sendcounts, displs, block_datatype, 0, MPI_COMM_WORLD);
-  //printf("%s\n", "Dopo gather elements");
   return 0;
 }
 
 int gatherElementsCol(block*** matrix, block*** my_elements){
-  //printf("%d) %s\n", rank, "Prima gatherElementsCol");
   MPI_Gatherv(**my_elements, sendcounts[rank], block_datatype, **matrix, sendcountsCol, displsCol , ncol_type, 0, MPI_COMM_WORLD);
   return 0;
 }
@@ -852,8 +662,6 @@ int gatherBlocks(block*** matrix, block*** my_block){
 
   rank_y = rank / radp;
   rank_x = rank % radp;
-
-  //printf("%d) Dimensioni blocco = ( %d, %d)\n", rank, (*nrow), (*ncol));
 
   //each process computes dim rows
   int row = ((rank_y+1) * size)/radp - (rank_y * size)/radp + 2;
@@ -878,24 +686,14 @@ int gatherBlocks(block*** matrix, block*** my_block){
         num_row = ((rank_y + 1) * (size))/radp - start_row;
         num_col = ((rank_x + 1) * (size))/radp - start_col;
 
-        //printf("%d) start r = %d, start c = %d, num_row = %d, num_col = %d (%d)\n", i, start_row, start_col, num_row, num_col, (num_row + 2) == *nrow);
-        //printf("%d\n", ((*matrix)[start_row] + start_col)->value);
-
-        //printf("Invio i miei dati a %d. \n", i);
         if ((num_row) + 2 == *nrow)
           MPI_Recv((*matrix)[start_row] + start_col, num_col, block_n_element_col, i, 0, MPI_COMM_WORLD, &st);
         else
           MPI_Recv((*matrix)[start_row] + start_col, num_col, block_n1_element_col, i, 0, MPI_COMM_WORLD, &st);
-        //printf("Dati inviati a %d. \n", i);
-
-        //  tmp += num_row;
       }
   }
   else{
-      //printf("%d)Ricevo i dati. \n", rank);
       MPI_Send(&((*my_block)[1][1]), (*ncol)-2, block_n_element_col_r, 0, 0, MPI_COMM_WORLD);
-      //printf("%d)Ho ricevuto %d\n", rank,(&((*my_block)[1][1]))->value);
-      //printf("%d)Dati ricevuti. \n", rank);
   }
   return 0;
 }
@@ -909,50 +707,6 @@ int Bcast(int message){
   return 0;
 }
 
-int print_once(int prev,int next, block** mypartition){
-	int stampare = 0;
-	MPI_Status recv_status;
-
-	if(rank == n_process - 1 ){
-		if ( MPI_Recv(&stampare, 1, MPI_INT, prev, 0, MPI_COMM_WORLD, &recv_status) == -1){
-			printf("MPI_Recv failed.\n");
-			return -1;
-		}
-		print_sub_matrix(mypartition, sendcounts[rank]/size);
-    //print_sub_block(mypartition);
-    fflush(stdin);
-    sleep(1);
-	}else if(rank == 0){
-    print_sub_matrix(mypartition, sendcounts[rank]/size);
-		//print_sub_block(mypartition);
-    fflush(stdin);
-    sleep(1);
-		stampare = 1;
-
-		if ( MPI_Send(&stampare, 1, MPI_INT, next, 0, MPI_COMM_WORLD) == -1){
-            printf("MPI_Send failed.\n");
-            return -1;
-        }
-	}else{
-		if ( MPI_Recv(&stampare, 1, MPI_INT, prev, 0, MPI_COMM_WORLD, &recv_status) == -1){
-			printf("MPI_Recv failed.\n");
-			return -1;
-		}
-
-		print_sub_matrix(mypartition, sendcounts[rank]/size);
-    //print_sub_block(mypartition);
-    fflush(stdin);
-    sleep(1);
-
-		if ( MPI_Send(&stampare, 1, MPI_INT, next, 0, MPI_COMM_WORLD) == -1){
-            printf("MPI_Send failed.\n");
-            return -1;
-        }
-	}
-
-	return 0;
-}
-
 void init_input_data(block*** matrix, block*** my_block, int* nrow, int* ncol)
 {
     MPI_Status st;
@@ -962,13 +716,9 @@ void init_input_data(block*** matrix, block*** my_block, int* nrow, int* ncol)
     rank_y = rank / radp;
     rank_x = rank % radp;
 
-    //printf("%d) Dimensioni blocco = ( %d, %d)\n", rank, (*nrow), (*ncol));
-
     //each process computes dim rows
     *nrow = ((rank_y+1) * size)/radp - (rank_y * size)/radp + 2;
     *ncol = ((rank_x+1) * size)/radp - (rank_x * size)/radp + 2;
-
-    //printf("%d) Dimensioni blocco = ( %d, %d)\n", rank, (*nrow), (*ncol));
 
     if (n_process == 1) *nrow = *ncol = size;
 
@@ -979,16 +729,12 @@ void init_input_data(block*** matrix, block*** my_block, int* nrow, int* ncol)
         (*my_block)[i] = (*my_block)[i-1] + (*ncol );
     }
 
-    //printf("%d) (my) num_row = %d, num_col = %d \n", rank, *nrow, *ncol);
-
     if (!rank){
         //copio nel nuovo vettore i dati
         for (int i = 1; i < (*nrow ) - 1; i++) {
             memcpy(&(*my_block)[i][1], (*matrix)[i-1], ((*ncol ) - 2)*sizeof(block));
-            //print_sub_block(*my_block);
         }
 
-        //float **tmp = *mc;
         for (int i = 1; i < n_process; i++) {
         	int rank_x, rank_y;
         	int start_row, start_col;
@@ -1003,23 +749,14 @@ void init_input_data(block*** matrix, block*** my_block, int* nrow, int* ncol)
           num_row = ((rank_y + 1) * (size))/radp - start_row;
           num_col = ((rank_x + 1) * (size))/radp - start_col;
 
-          //printf("%d) start r = %d, start c = %d, num_row = %d, num_col = %d (%d)\n", i, start_row, start_col, num_row, num_col, (num_row  + 2) == *nrow);
-          //printf("%d\n", ((*matrix)[start_row] + start_col)->value);1
-
-          //printf("Invio i miei dati a %d. \n", i);
           if ((num_row  + 2) == *nrow)
           	MPI_Send((*matrix)[start_row] + start_col, num_col, block_n_element_col, i, 0, MPI_COMM_WORLD);
           else
           	MPI_Send((*matrix)[start_row] + start_col, num_col, block_n1_element_col, i, 0, MPI_COMM_WORLD);
-          //printf("Dati inviati a %d. \n", i);
-          //  tmp += num_row;
         }
     }
     else{
-        //printf("%d)Ricevo i dati. \n", rank);
         MPI_Recv(&((*my_block)[1][1]), (*ncol-2), block_n_element_col_r, 0, 0, MPI_COMM_WORLD, &st);
-        //printf("%d)Ho ricevuto %d\n", rank,(&((*my_block)[1][1]))->value);
-        //printf("%d)Dati ricevuti. \n", rank);
     }
 }
 
@@ -1061,12 +798,8 @@ void halo_exchange(block **my_block)
 }
 
 int checkUnknown(int* unknowns, int* unknown){
-  //Aggiorno il nuovo valore degli unknown
-  //Poichè i numeri sono negativi equivale ad una sottrazione
-  //printf("%d) unknown = %d\n", 0, unknowns[0] );
+  //Funzione richiamata dal processo uno per controllare e aggiornare il numero delle celle sconosciute
   for(int i = 1; i < n_process; i++){
-    //printf("%d) unknown = %d\n", i, unknowns[i] );
-    //1 vuol dire che le regole non sono rispettate
     if(unknowns[i] == 1) {
       free(unknowns);
       printf("Returning -1\n");
@@ -1074,8 +807,6 @@ int checkUnknown(int* unknowns, int* unknown){
     }
     *unknown = *unknown + unknowns[i];
   }
-  //printf("%d) unknown = %d\n", rank, *unknown);
-  //sleep(1);
   free(unknowns);
   return *unknown;
 }
@@ -1156,4 +887,57 @@ int check_adjacent_rules_seq(block*** m, int unknown){
 	}
 
 	return unknown;
+}
+
+int check_input(char** input_file, int argc, char** argv){
+  int radp = sqrt(n_process);
+  size = 0;
+  int c;
+
+  opterr = 0;
+
+  while ((c = getopt (argc, argv, "f:s:")) != -1)
+   switch (c)
+     {
+     case 'f':
+       *input_file = (char*) malloc(strlen(optarg)*sizeof(char));
+       strcpy(*input_file,optarg);
+       break;
+     case 's':
+       if( isNumber(optarg )) size = atol(optarg);
+       else{
+         if(!rank) printf("Il parametro passato con -s è la dimensione del puzzle, deve essere un intero.\n");
+         return -1;
+       }
+       break;
+     default:
+       if(!rank) printf("Paramentro sconosciuto.\n");
+     }
+
+
+  if( *input_file == NULL){
+      //Setto il valore di defult a stdin
+      if(!rank) printf("Il parametro passato con -f è il file da dove prendere la matrice. Di default verrà aspettata la matrice da stdin\n");
+      *input_file = (char*) malloc(6*sizeof(char));
+      strcpy(*input_file,"stdin");
+  }
+
+  if (size < 1 ){
+    if(!rank) printf("Il parametro passato con -s è la dimensione del puzzle, è obbligatorio e deve essere un intero maggiore di 0.\n");
+    return -1;
+  }
+
+  if(!strcmp(*input_file ,"stdin"))
+      read_matrix_from_stdin(&global_matrix);
+  else if( read_matrix_from_file(&global_matrix,*input_file) == -1) {
+      if (!rank) printf("Impossibile leggere dal file.\n");
+      return -1;
+  }
+
+  if ((float) radp != sqrt(n_process)){
+    if (!rank) printf("Il numero di processi deve essere un quadrato perfetto.\n");
+    return -1;
+  }
+
+  return 0;
 }

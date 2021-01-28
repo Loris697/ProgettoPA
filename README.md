@@ -16,6 +16,8 @@ mpirun -n 4 ./hitori_generator_par input_file 20
 hitori_par.c
 Semplicemente si occupa di risolvere un puzzle. Il funzionamento è molto simile al generatore. Pure questo può funzionare in due modalità.
 
-./random_matrix_generator 20 | mpirun -n 4 ./hitori_par stdin 20
+mpirun -n 4 ./hitori_par -f <file>  -s <dimensione>
 
-mpirun -n 4 ./hitori_par input_file 20
+mpirun -n 4 ./hitori_par -s <dimensione>
+
+L'argomento "-s" è obbligatorio mentre "-f" è opzionale. Se non viene specificato il valore di default sarà "stdin", cioè il programma aspetterà la matrice dallo standard input.
