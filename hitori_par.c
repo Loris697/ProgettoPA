@@ -331,7 +331,9 @@ int check_adjacent_rules(block*** m, int *u){
 
 int find_connection_of_white(int row,int col,block** matrix){
     int* flag_vector = (int *) calloc(size*size,sizeof(int));
+	//Implementazione della ricerca DFS
     check_neighborhood(row, col, matrix, &flag_vector);
+	//Verifico che tutti i bianchi siano stati raggiunti
     for(int j = 0; j < size*size; j++){
         int r = j / size;
         int c = j % size;
